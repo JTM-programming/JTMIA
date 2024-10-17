@@ -3,7 +3,10 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
 export async function GET (){
-    const openai = new OpenAI();
+    console.log("Entra");
+    const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      });
 
     const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
@@ -11,11 +14,11 @@ export async function GET (){
             { role: "system", content: "You are a helpful assistant." },
             {
                 role: "user",
-                content: "Write a haiku about recursion in programming.",
+                content: "Dame un título para mi landing page.",
             },
         ],
     });
 
     console.log(completion.choices[0].message);
-    return NextResponse.json(completion)
+    return NextResponse.json(completion.choices[0].message);
 }
