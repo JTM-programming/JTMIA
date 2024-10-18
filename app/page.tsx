@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -12,10 +12,9 @@ export default function Home() {
     } catch (error) {
       console.log("Ocurrió un error en el proceso", error);
     }
-  }
-  
+  };
+
   handleSubmit();
-  
 
   return (
     <>
