@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="bg-gray-300 max-w-full w-[900px] aspect-video mx-auto">
 
                 </div>
-                <CustomButton customClasses="bg-red-500 mx-auto mt-[30px]"/>
+                <CustomButton customClasses="bg-red-500 text-white mx-auto mt-[30px]"/>
             </div>
         </div>
     </section>
