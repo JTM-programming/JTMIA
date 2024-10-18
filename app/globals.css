@@ -8,6 +8,5 @@
 }
 
 .jtm-container {
-  @apply max-w-[1100] mx-auto;
+  @apply max-w-[1100px] mx-auto;
 }
-

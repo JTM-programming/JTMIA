@@ -1,6 +1,7 @@
 'use client'
 
 import Header from "@/components/Header/Header";
+import Hero from "@/components/Hero/Hero";
 import axios from "axios";
 
 export default function Home() {
@@ -18,7 +19,8 @@ export default function Home() {
 
   return (
     <>
-    <Header/>
+		<Header/>
+		<Hero/>
     </>
   );
 }
