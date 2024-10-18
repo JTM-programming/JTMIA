@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export const Header = () => {
+export default function Header() {
   const [timeLeft, setTimeLeft] = useState<string>("");
 
   useEffect(() => {
@@ -39,12 +39,15 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`flex justify-center items-center bg-red-500 
-          jtm-container
-        `}
+        className="flex justify-center items-center bg-red-500 py-4"
       >
-        <h1>La oferta termina en: </h1>
-        <p>{timeLeft}</p>
+        <div className="jtm-container">
+          <div className="text-center text-white font-semibold">
+            {/* El h1 es para titulos importantes para el SEO */}
+            <h6>La oferta termina en: </h6> 
+            <p>{timeLeft}</p>
+          </div>
+        </div>
       </header>
     </>
   );
