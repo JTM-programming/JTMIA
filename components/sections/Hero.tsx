@@ -9,7 +9,7 @@ const Hero = () => {
             <div>
                 <h1 className='font-bold text-[40px] leading-[110%] text-center'>Título Principal</h1>
                 <p className='mt-[14px] mb-[30px] text-center'>
-                    Descripción...
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id ultrices venenatis, augue urna tincidunt nisi, nec tincidunt nunc nisi vel augue. Sed vitae lectus vel ligula varius tincidunt. Proin sed mauris eget nunc malesuada ultrices.
                 </p>
                 <div className="bg-gray-300 max-w-full w-[900px] aspect-video mx-auto">
 
