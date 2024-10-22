@@ -8,8 +8,8 @@ const Hero = () => {
         <div className="jtm-container">
             <div>
                 <h1 className='font-bold text-[40px] leading-[110%] text-center'>Título Principal</h1>
-                <p className='mt-[14px] mb-[30px] text-center'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id ultrices venenatis, augue urna tincidunt nisi, nec tincidunt nunc nisi vel augue. Sed vitae lectus vel ligula varius tincidunt. Proin sed mauris eget nunc malesuada ultrices.
+                <p className='mt-[16px] text-[16px] mb-[32px] text-center max-w-[900px] mx-auto'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id ultrices venenatis, augue urna tincidunt nisi, nec tincidunt nunc nisi vel augue. Sed vitae lectus vel ligula varius tincidunt.
                 </p>
                 <div className="bg-gray-300 max-w-full w-[900px] aspect-video mx-auto">
 
