@@ -42,7 +42,7 @@ export default function Header() {
         className="flex justify-center items-center bg-red-500 py-4"
       >
         <div className="jtm-container">
-          <div className="text-center text-white font-semibold">
+          <div className="flex gap-[16px] text-center text-white font-semibold">
             {/* El h1 es para titulos importantes para el SEO */}
             <h6>La oferta termina en: </h6> 
             <p>{timeLeft}</p>
