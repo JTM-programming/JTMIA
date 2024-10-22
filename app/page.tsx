@@ -1,5 +1,6 @@
 "use client";
 
+import Banner from "@/components/sections/Banner";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import axios from "axios";
@@ -20,6 +21,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <Banner/>
     </>
   );
 }

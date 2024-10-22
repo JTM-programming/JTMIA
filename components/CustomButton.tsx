@@ -11,7 +11,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({customClasses}) => {
 			<a 
 				href="#!" 
 				className={`
-					p-[14px] text-[18px] font-semibold w-[400px] max-w-full block text-center
+					bg-red-500 text-white p-[14px] text-[18px] font-semibold w-[400px] max-w-full block text-center
 					${customClasses}
 				`} 
 			>Botón</a>
