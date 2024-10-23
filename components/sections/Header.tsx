@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="flex justify-center items-center bg-red-500 py-4"
+        className="flex justify-center items-center highlightBg py-4"
       >
         <div className="jtm-container">
           <div className="flex gap-[16px] text-center text-white font-semibold">

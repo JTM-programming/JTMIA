@@ -1,16 +1,25 @@
+/* Static & Global File */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.jtm-container {
+  @apply max-w-[1100px] mx-auto px-4;
+}
+.jtm-title {
+  @apply font-bold text-[32px] text-center;
+}
+
+/* Variable File (One by proyect) */
 :root {
   /* Fondo del body */
-  --background: #F1F6FF;
+  --background: #F1F6FF; /* Estas cosas las vamos a llenar con variables en un archivo tsx y despues subirlo*/
   /* Fondo de tarjetas */
   --foreground: #FFF;
   /* Fondo de botones y elementos fuertes */
-  --highlight: ;
+  --highlight: #2C6FFF;
   /* Color de titulos */
-  --titles-color: ;
+  --titles-color: #06122C;
   /* Color de textos */
   --text-color: ;
 }
@@ -20,6 +29,15 @@ body {
   background-color: var(--background);
 }
 
-.jtm-container {
-  @apply max-w-[1100px] mx-auto px-4;
+.foreground {
+  background-color: var(--foreground);
+}
+.highlightBorder {
+  border-color: var(--highlight);
+}
+.highlightBg {
+  background-color: var(--highlight);
+}
+.titleColor {
+  color: var(--titles-color);
 }
