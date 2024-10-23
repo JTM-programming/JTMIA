@@ -3,14 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fondo del body */
+  --background: #F1F6FF;
+  /* Fondo de tarjetas */
+  --foreground: #FFF;
+  /* Fondo de botones y elementos fuertes */
+  --highlight: ;
+  /* Color de titulos */
+  --titles-color: ;
+  /* Color de textos */
+  --text-color: ;
 }
 
 body {
   font-family: 'Inter Variable', sans-serif;
+  background-color: var(--background);
 }
 
 .jtm-container {
-  @apply max-w-[1100px] mx-auto;
+  @apply max-w-[1100px] mx-auto px-4;
 }

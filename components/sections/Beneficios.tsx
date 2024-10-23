@@ -5,7 +5,7 @@ export default function Beneficios() {
 				<h2>Beneficios</h2>
 				<div className="w-[936px] max-w-full mx-auto">
 					<div className="flex justify-between gap-y-4">
-						<div className="rounded-[8px] bg-red-300">
+						<div className="rounded-[8px] bg-red-300 px-[32px] py-[20px]">
 
 						</div>
 					</div>
