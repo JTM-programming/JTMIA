@@ -1,4 +1,22 @@
 export default function Beneficios() {
+	const BENEFICIOS = [
+		{
+			titulo: "Ahorro de tiempo",
+			descripcion: "descripcion",
+		},
+		{
+			titulo: "Ahorro de tiempo 2",
+			descripcion: "descripcion",
+		},
+		{
+			titulo: "Ahorro de tiempo 3",
+			descripcion: "descripcion",
+		},
+		{
+			titulo: "Ahorro de tiempo 4",
+			descripcion: "descripcion",
+		},
+	]
 	return (
 		<section className='py-[80px] md:py-[100px]'>
 			<div className="jtm-container">
@@ -10,26 +28,17 @@ export default function Beneficios() {
 						<div className="absolute size-[442px] full-[332px] border-[4px] opacity-60 highlightBorder rounded-full"></div>
 					</div>
 					<div className="relative flex flex-wrap justify-between gap-y-8">
-						<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-							<img className="size-[24px] bg-red-500" src="/" alt="" />
-							<h3 className="text-[22px] font-bold my-[16px]">Ahorro de tiempo</h3>
-							<p className="font-normal text-[16px]">Diseña una landing page en minutos. Sin experiencia y sin lidiar con nadie.</p>
-						</div>
-						<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-							<img className="size-[24px] bg-red-500" src="/" alt="" />
-							<h3 className="text-[22px] font-bold my-[16px]">Ahorro de tiempo</h3>
-							<p className="font-normal text-[16px]">Diseña una landing page en minutos. Sin experiencia y sin lidiar con nadie.</p>
-						</div>
-						<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-							<img className="size-[24px] bg-red-500" src="/" alt="" />
-							<h3 className="text-[22px] font-bold my-[16px]">Ahorro de tiempo</h3>
-							<p className="font-normal text-[16px]">Diseña una landing page en minutos. Sin experiencia y sin lidiar con nadie.</p>
-						</div>
-						<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-							<img className="size-[24px] bg-red-500" src="/" alt="" />
-							<h3 className="text-[22px] font-bold my-[16px]">Ahorro de tiempo</h3>
-							<p className="font-normal text-[16px]">Diseña una landing page en minutos. Sin experiencia y sin lidiar con nadie.</p>
-						</div>
+						{
+							BENEFICIOS.map((beneficio) => { 
+								return(
+									<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
+										<img className="size-[24px] bg-red-500" src="/" alt="" />
+										<h3 className="text-[22px] font-bold my-[16px]">{beneficio.titulo}</h3>
+										<p className="font-normal text-[16px]">{beneficio.descripcion}</p>
+									</div>
+								)
+							 })
+						}
 					</div>
 				</div>
 			</div>
