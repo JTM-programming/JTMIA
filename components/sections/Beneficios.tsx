@@ -23,9 +23,9 @@ export default function Beneficios() {
 				<h2 className="jtm-title mb-[32px]">Beneficios</h2>
 				<div className="w-[950px] max-w-full mx-auto relative">
 					<div className="absolute flex items-center justify-center w-full h-full">
-						<div className="absolute size-[332px] full-[332px] highlightBg rounded-full"></div>
-						<div className="absolute size-[386px] full-[332px] border-[10px] opacity-80 highlightBorder rounded-full"></div>
-						<div className="absolute size-[442px] full-[332px] border-[4px] opacity-60 highlightBorder rounded-full"></div>
+						<div className="absolute size-[332px] highlightBg rounded-full"></div>
+						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
+						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
 					</div>
 					<div className="relative flex flex-wrap justify-between gap-y-8">
 						{
