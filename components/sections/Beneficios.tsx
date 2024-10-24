@@ -24,8 +24,8 @@ export default function Beneficios() {
 				<div className="w-[950px] max-w-full mx-auto relative">
 					<div className="absolute flex items-center justify-center w-full h-full">
 						<div className="absolute size-[332px] highlightBg rounded-full"></div>
-						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
-						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
+						<div className="scan-animation absolute highlightBorder rounded-full"></div>
+						<div className="scan-animation absolute highlightBorder rounded-full"></div>
 					</div>
 					<div className="relative flex flex-wrap justify-between gap-y-8">
 						{

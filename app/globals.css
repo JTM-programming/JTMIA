@@ -42,7 +42,7 @@ body {
   color: var(--titles-color);
 }
 
-.scan-animation.--1 {
+.scan-animation {
   height: 332px;
   width: 332px;
   opacity: 100%;
