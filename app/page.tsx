@@ -4,6 +4,7 @@ import Banner from "@/components/sections/Banner";
 import Beneficios from "@/components/sections/Beneficios";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import Plans from "@/components/sections/Plans";
 import axios from "axios";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero />
       <Beneficios/>
       <Banner/>
+      <Plans/>
     </>
   );
 }
