@@ -50,12 +50,15 @@ body {
 
   /* background-color: red !important; */
 
-  animation: scanAnimation 2s ease-in infinite ;
+  animation: scanAnimation 3s ease-in infinite ;
 
+}
+.scan-animation.--2 {
+  animation-delay: 1s;
 }
 
 @keyframes scanAnimation {
-  to {
+  100% {
     opacity: 0;
     height: 500px;
     width: 500px;

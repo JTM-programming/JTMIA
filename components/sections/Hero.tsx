@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="jtm-container">
             <div className="flex items-center md:gap-[64px]">
                 <div className="max-w-full w-[700px]">
-                  <span>LOGO</span>
-                  <h1 className='font-bold mt-[32px] text-[28px] leading-[110%]'>Titulo principal Aca va la promesa (Entre 28 y 32px) (Máximo 5 o 6 Lineas)</h1>
+                  <h2 className='font-bold text-[#2C6FFF] text-[18px]'>LUTA</h2>
+                  <h1 className='font-bold mt-[16px] text-[28px] leading-[110%]'>Tu Landing Page perfecta, con solo unos clics. Más rapido, mejor y más barato.</h1>
                   <p className='mt-[16px] mb-[32px] text-[16px] mx-auto'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id ultrices venenatis, augue urna tincidunt nisi, nec tincidunt nunc nisi vel augue. Sed vitae lectus vel ligula varius tincidunt.
+                    Lanza tu sitio web profesional en 2 minutos y sin complicaciones. Diseñado específicamente para profesionales de la salud, nuestra herramienta te permite crear una landing page atractiva y funcional a <strong>1/3 del precio de mercado</strong> y <strong>3 veces más efectiva</strong>.
                   </p>
                   <CustomButton customClasses="bg-red-500 text-white"/>
                 </div>
