@@ -9,6 +9,7 @@ import MovingSpan from "@/components/sections/MovingSpan";
 import Plans from "@/components/sections/Plans";
 import Testimony from "@/components/sections/Testimony";
 import axios from "axios";
+import Faqs from '@/components/sections/faqs';
 
 export default function Home() {
   const handleSubmit = async () => {
@@ -31,6 +32,7 @@ export default function Home() {
       <Testimony />
       <Banner />
       <Plans />
+      <Faqs/>
     </>
   );
 }

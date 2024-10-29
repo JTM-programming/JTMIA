@@ -64,7 +64,7 @@ const Testimony = () => {
           className="max-w-5xl"
         >
           {testimonios.map((el, index) => (
-            <SwiperSlide key={index} className="flex justify-center">
+            <SwiperSlide key={index} className="flex justify-center px-8">
               <CardTestimony testimonio={el} />
             </SwiperSlide>
           ))}
