@@ -1,10 +1,12 @@
 "use client";
 
+import CardTestimony from "@/components/CardTestimony";
 import Banner from "@/components/sections/Banner";
 import Beneficios from "@/components/sections/Beneficios";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import Plans from "@/components/sections/Plans";
+import Testimony from "@/components/sections/Testimony";
 import axios from "axios";
 
 export default function Home() {
@@ -23,9 +25,10 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <Beneficios/>
-      <Banner/>
-      <Plans/>
+      <Beneficios />
+      <Testimony />
+      <Banner />
+      <Plans />
     </>
   );
 }
