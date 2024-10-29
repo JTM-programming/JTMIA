@@ -17,13 +17,13 @@ const CardTestimony: FC<IPropsTestimony> = ({ testimonio }) => {
   }
   return (
     <>
-      <div className="flex flex-col justify-center items-center min-w-60 h-80 foreground rounded-md gap-3">
+      <div className="flex flex-col justify-center items-center h-80 foreground rounded-md gap-3">
         <h6 className="titleColor font-semibold text-2xl">
           {testimonio.titulo}
         </h6>
         <p className="mx-4">{testimonio.contenido}</p>
         <div className="flex items-center gap-2">
-          <img src="" alt="" className="w-10 h-10 rounded-full" />
+          <img src="" alt="" className="max-w-10 h-10 rounded-full" />
           <div className="flex flex-col justify-center">
             <p className="text-lg font-medium">{testimonio.usuario}</p>
             <div className="flex justify-center">

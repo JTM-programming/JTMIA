@@ -61,7 +61,7 @@ const Testimony = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="max-w-5xl"
+          className="swiper-container"
         >
           {testimonios.map((el, index) => (
             <SwiperSlide key={index} className="flex justify-center">
@@ -70,7 +70,6 @@ const Testimony = () => {
           ))}
         </Swiper>
         <CustomButton />
-        <p className="text-sm text-gray-500 mt-2">PD: La oferta termina hoy.</p>
       </div>
     </>
   );
