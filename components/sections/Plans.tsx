@@ -1,8 +1,8 @@
 import CustomButton from '../CustomButton'
 const Plans = () => {
     return (
-        <section className='py-[80px]'>
-            <div className="jtm-container py-[80px] px-[123px]">
+        <section>
+            <div className="jtm-container py-[80px] px-[100px]">
                 <h2 className='text-[28px] font-bold text-gray-800 mx-auto leading-[120%] text-center'>
                     Planes
                 </h2>
