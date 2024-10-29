@@ -4,6 +4,7 @@ import Banner from "@/components/sections/Banner";
 import Beneficios from "@/components/sections/Beneficios";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import MovingSpan from "@/components/sections/MovingSpan";
 import Plans from "@/components/sections/Plans";
 import axios from "axios";
 
@@ -23,6 +24,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <MovingSpan/>
       <Beneficios/>
       <Banner/>
       <Plans/>
