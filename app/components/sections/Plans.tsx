@@ -7,7 +7,7 @@ const Plans = () => {
                 <h2 className='text-[28px] font-bold text-gray-800 mx-auto leading-[120%] text-center'>
                     Planes
                 </h2>
-                <div className='grid md:grid-cols-3 mt-[32px]'>
+                <div className='grid md:grid-cols-3 gap-4 mt-8'>
                     <div className=' mx-auto leading-[120%] bg-white p-8 rounded-[8px]'>
                         <h3 className='text-[22px]'>
                             Producto 1
@@ -23,7 +23,7 @@ const Plans = () => {
                         <p className='text-[28px] font-bold text-center'>
                             $70
                         </p>
-                        <CustomButton customClasses='mt-[32px] mx-auto'/>
+                        <CustomButton customClasses='mt-8 mx-auto'/>
                     </div>
                     <div className=' mx-auto leading-[120%] bg-white p-8 rounded-[8px]'>
                         <h3 className='text-[22px]'>
@@ -40,7 +40,7 @@ const Plans = () => {
                         <p className='text-[28px] font-bold text-center'>
                             $120
                         </p>
-                        <CustomButton customClasses='mt-[32px] mx-auto'/>
+                        <CustomButton customClasses='mt-8 mx-auto'/>
                     </div>
                     <div className=' mx-auto leading-[120%] bg-white p-8 rounded-[8px]'>
                         <h3 className='text-[22px]'>
@@ -57,7 +57,7 @@ const Plans = () => {
                         <p className='text-[28px] font-bold text-center'>
                             $300
                         </p>
-                        <CustomButton customClasses='mt-[32px] mx-auto'/>
+                        <CustomButton customClasses='mt-8 mx-auto'/>
                     </div>
                     
                 </div>
