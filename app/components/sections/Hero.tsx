@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="py-[80px] md:pt-[20px] md:pb-[100px]">
       <div className="jtm-container">
-        <div className="flex items-center md:gap-[16px]">
+        <div className="flex items-center flex-col-reverse md:flex-row md:gap-[16px]">
           <div className="max-w-full w-[700px]">
             <h2 className="font-bold text-[#2C6FFF] text-[18px]">LUTA</h2>
             <h1 className="font-bold mt-[16px] text-[28px] leading-[110%]">
