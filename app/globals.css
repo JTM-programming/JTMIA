@@ -6,6 +6,7 @@
 .jtm-container {
   @apply max-w-[1100px] mx-auto px-4;
 }
+
 .jtm-title {
   @apply font-bold text-[32px] text-center;
 }
@@ -13,7 +14,8 @@
 /* Variable File (One by proyect) */
 :root {
   /* Fondo del body */
-  --background: #F1F6FF; /* Estas cosas las vamos a llenar con variables en un archivo tsx y despues subirlo*/
+  --background: #F1F6FF;
+  /* Estas cosas las vamos a llenar con variables en un archivo tsx y despues subirlo*/
   /* Fondo de tarjetas */
   --foreground: #FFF;
   /* Fondo de botones y elementos fuertes */
@@ -32,12 +34,15 @@ body {
 .foreground {
   background-color: var(--foreground);
 }
+
 .highlightBorder {
   border-color: var(--highlight);
 }
+
 .highlightBg {
   background-color: var(--highlight);
 }
+
 .titleColor {
   color: var(--titles-color);
 }
@@ -50,9 +55,10 @@ body {
 
   /* background-color: red !important; */
 
-  animation: scanAnimation 3s ease-in infinite ;
+  animation: scanAnimation 3s ease-in infinite;
 
 }
+
 .scan-animation.--2 {
   animation-delay: 1s;
 }
@@ -72,6 +78,7 @@ body {
 .moving-span-text {
   @apply text-[18px] font-semibold text-white w-[100px]
 }
+
 .marquee {
   display: flex;
   gap: 50px;
@@ -80,9 +87,21 @@ body {
 
 @keyframes marquee {
   0% {
-  transform: translateX(0%);
+    transform: translateX(0%);
   }
+
   100% {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
   }
+}
+
+/* Carrusel */
+/* .swiper-container {
+  width: 100%;
+  max-width: 1100px;
+} */
+
+.swiper-buttons-next,
+.swiper-buttons-prev {
+  right: 30px;
 }

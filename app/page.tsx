@@ -1,15 +1,15 @@
 "use client";
 
-import CardTestimony from "@/components/CardTestimony";
-import Banner from "@/components/sections/Banner";
-import Beneficios from "@/components/sections/Beneficios";
-import Header from "@/components/sections/Header";
-import Hero from "@/components/sections/Hero";
-import MovingSpan from "@/components/sections/MovingSpan";
-import Plans from "@/components/sections/Plans";
-import Testimony from "@/components/sections/Testimony";
+import CardTestimony from "@/app/components/CardTestimony";
+import Banner from "@/app/components/sections/Banner";
+import Beneficios from "@/app/components/sections/Beneficios";
+import Header from "@/app/components/sections/Header";
+import Hero from "@/app/components/sections/Hero";
+import MovingSpan from "@/app/components/sections/MovingSpan";
+import Plans from "@/app/components/sections/Plans";
+import Testimony from "@/app/components/sections/Testimony";
 import axios from "axios";
-import Faqs from '@/components/sections/faqs';
+import Faqs from '@/app/components/sections/faqs';
 
 export default function Home() {
   const handleSubmit = async () => {

@@ -1,4 +1,5 @@
-import CustomButton from '../CustomButton'
+import CustomButton from '@/app/components/CustomButton'
+
 const Plans = () => {
     return (
         <section>
