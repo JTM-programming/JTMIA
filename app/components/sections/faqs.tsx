@@ -34,7 +34,7 @@ export default function Faqs() {
 	}
 
 	return (
-		<div className="max-w-[900px] px-4 mx-auto py-[80px] md:py-[100px]">
+		<div className="max-w-[900px] px-4 mx-auto py-[60px] md:py-[80px]">
 			<h2 className="text-[40px] text-center mb-[40px] font-extrabold text-[#031221] leading-[110%] tracking-[-.5px] max-w-[990px] mx-auto text-balance capitalize">Preguntas Frecuentes</h2>
 			{
 				Preguntas.map((item) => (

@@ -18,7 +18,7 @@ export default function Beneficios() {
 		},
 	]
 	return (
-		<section className='py-[80px] md:py-[100px]'>
+		<section className='py-[60px] md:py-[80px] overflow-clip'>
 			<div className="jtm-container">
 				<h2 className="jtm-title mb-[32px]">Beneficios</h2>
 				<div className="w-[950px] max-w-full mx-auto relative">
