@@ -27,7 +27,7 @@ export default function Beneficios() {
 						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
 						<div className="scan-animation --2 absolute highlightBorder rounded-full"></div>
 					</div>
-					<div className="relative flex flex-wrap justify-between gap-y-8">
+					<div className="relative flex flex-wrap justify-between gap-y-4 md:gap-y-8">
 						{
 							BENEFICIOS.map((beneficio) => { 
 								return(

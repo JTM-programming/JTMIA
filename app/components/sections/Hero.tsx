@@ -3,9 +3,9 @@ import CustomButton from '@/app/components/CustomButton'
 
 const Hero = () => {
   return (
-    <section className="py-[80px] md:pt-[20px] md:pb-[100px]">
+    <section className="py-[80px] pt-[20px] md:pb-[100px]">
       <div className="jtm-container">
-        <div className="flex items-center flex-col-reverse md:flex-row md:gap-[16px]">
+        <div className="flex items-center flex-col-reverse md:flex-row gap-[16px]">
           <div className="max-w-full w-[700px]">
             <h2 className="font-bold text-[#2C6FFF] text-[18px]">LUTA</h2>
             <h1 className="font-bold mt-[16px] text-[28px] leading-[110%]">
@@ -26,8 +26,9 @@ const Hero = () => {
             <div className="bg-gray-300 max-w-full w-[900px] aspect-video mx-auto"></div>
           ) : (
             // Si el usuario no marco
-            <div className="max-w-full w-[900px] aspect-square mx-auto">
-              <img src="/images/luta-hero.webp" alt="Luta Landing Pages" />
+            <div className="max-w-full size-full md:w-[900px] aspect-square mx-auto object-contain h-full">
+              <img className="hidden md:block" src="/images/luta-hero.webp" alt="Luta Landing Pages" />
+              <img className="block md:hidden" src="/images/luta-hero-mobile.webp" alt="Luta Landing Pages" />
             </div>
           )}
         </div>
