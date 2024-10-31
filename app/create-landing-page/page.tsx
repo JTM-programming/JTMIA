@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-export default function createLanding() {
+export default function CreateLanding() {
 
 	const [businessName, setBusinessName] = useState<string>('');
 	const [businessDescription, setBusinessDescription] = useState<string>('');
@@ -12,9 +12,18 @@ export default function createLanding() {
 	const [email, setEmail] = useState<string>('');
 	const [story, setStory] = useState<string>('');
 
-	const handleSubmit = () => {
+	const handleSubmit = async () => {
 		try {
-			// Aca usar axios para enviar los valores
+			await axios.post("/api/openai", {
+				businessName,
+				businessDescription,
+				landingGoal,
+				targetAudience,
+				beneficts,
+				email,
+				story
+			 });
+			window.location.href = "#!";
 		} catch {
 
 		}
@@ -25,7 +34,7 @@ export default function createLanding() {
 			<div className="max-w-[484px] mx-auto">
 				<span className="block text-center text-[18px] font-bold text-[#2C6FFF]">CREA TU LANDING EN 2 MINUTOS</span>
 				<h1 className="text-center text-[28px] font-bold leading-[120%] mt-4 mb-8">Llena este formulario para crear tu Landing Page</h1>
-				<form action="POST">
+				<form action="/" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
 					<label className="block mb-4" htmlFor="businessName">
 						Nombre del negocio
 						<input 
@@ -80,7 +89,10 @@ export default function createLanding() {
 							className="resize-none block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30" 
 						/>
 					</label>
-					<button className='bg-[#115CFF] w-full mt-8 text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center'>Crear</button>
+					<button 
+						type='submit'
+						className='bg-[#115CFF] w-full mt-8 text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center'
+					>Crear</button>
 				</form>
 			</div>
 		</section>
