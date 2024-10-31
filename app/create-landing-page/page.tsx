@@ -1,4 +1,5 @@
 'use client'
+import axios from 'axios';
 import { useState } from 'react';
 
 export default function createLanding() {
@@ -10,6 +11,14 @@ export default function createLanding() {
 	const [beneficts, setBeneficts] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
 	const [story, setStory] = useState<string>('');
+
+	const handleSubmit = () => {
+		try {
+			// Aca usar axios para enviar los valores
+		} catch {
+
+		}
+	}
 
 	return (
 		<section className="py-[80px] md:py-[100px] px-4">
@@ -71,6 +80,7 @@ export default function createLanding() {
 							className="resize-none block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30" 
 						/>
 					</label>
+					<button className='bg-[#115CFF] w-full mt-8 text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center'>Crear</button>
 				</form>
 			</div>
 		</section>
