@@ -1,20 +1,20 @@
 export default function Beneficios() {
 	const BENEFICIOS = [
 		{
-			titulo: "Ahorro de tiempo",
-			descripcion: "descripcion",
+			titulo: "Ahorras tiempo",
+			descripcion: "Crea una landing page 3 veces mejor, en minutos. Sin experiencia y sin lidiar con nadie.",
 		},
 		{
-			titulo: "Ahorro de tiempo 2",
-			descripcion: "descripcion",
+			titulo: "Ahorras dinero",
+			descripcion: "Crea tu Landing sin necesidad de contratar a un diseñador o programador. Todo con una interfaz intuitiva y fácil de usar.",
 		},
 		{
-			titulo: "Ahorro de tiempo 3",
-			descripcion: "descripcion",
+			titulo: "Optimizado para vos",
+			descripcion: "Plantilla especializada para psicólogos, nutricionistas, y otros profesionales de la salud, enfocadas en atraer a pacientes online.",
 		},
 		{
-			titulo: "Ahorro de tiempo 4",
-			descripcion: "descripcion",
+			titulo: "Textos con IA",
+			descripcion: "Nuestros textos están generados y optimizados por inteligencia artificial, asegurando que cada palabra capte la atención y convierta.",
 		},
 	]
 	return (
