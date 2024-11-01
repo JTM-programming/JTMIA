@@ -8,8 +8,8 @@ import Hero from "@/app/components/sections/Hero";
 import MovingSpan from "@/app/components/sections/MovingSpan";
 import Plans from "@/app/components/sections/Plans";
 import Testimony from "@/app/components/sections/Testimony";
+import Faqs from '@/app/components/sections/Faqs';
 import axios from "axios";
-import Faqs from '@/app/components/sections/faqs';
 
 export default function Home() {
   const handleSubmit = async () => {
