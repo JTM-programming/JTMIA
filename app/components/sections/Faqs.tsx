@@ -29,13 +29,13 @@ La diferencia es que está planeada y diseñada para un rubro específico, desar
 			  `
 Es simple... La verdad es que para que tu página rinda bien no hacen falta muchas cosas (aun así, la mayoría lo hace mal). 
 
-- Los títulos tienen que ser fáciles de entender. 
-- Los colores y espacios tienen que ser los adecuados. 
-- Tiene que funcionar rápido. 
-- La estructura debe guiar al usuario a tomar accion.
-- Las imágenes tienen que estar bien ubicadas y transmitir algo. 
+1 - Los títulos y textos tienen que ser fáciles de entender y demostrar que te necesitan. 
+2 - Los colores y espacios tienen que ser los adecuados. 
+3 - Tiene que funcionar rápido. 
+4 - La estructura debe guiar al usuario a tomar accion.
+5 - Las imágenes tienen que estar bien ubicadas y transmitir algo. 
 
-Esas son las únicas cosas que NECESITA una Landing Page para funcionar excelentemente. Y yo no sé esto solo por los 4 años que llevo haciéndolo (la mayoría lleva mucho más y ni les preguntes). 
+Esas son las únicas cosas que NECESITA una Landing Page para funcionar excelente. Y yo no sé esto solo por los 4 años que llevo haciéndolo (la mayoría lleva mucho más y ni les preguntes). 
 Lo sé porque me obsesiona este mundo, y esa obsesión es lo que hace que me moleste ver cómo venden porquerías. 
 
 Ahora... poniéndonos un poco más técnicos, lo que hace el sistema es usar secciones diseñadas por mí, pensadas para profesionales de la salud, y juntarlas con textos generados con inteligencia artificial según la información que colocaste en el formulario. Eso es lo que hace la diferencia.`
