@@ -7,16 +7,16 @@ declare global {
 	}
 }
 
-export default function PaypalCheckOut() {
+export default function PaypalCheckOut({plan}: any) {
 	const [paidFor, setPaidFor] = useState(false)
 	const [loadState, setLoadState] = useState({ loading: false, loaded: false });
 
 	const paypalRef = useRef<HTMLDivElement>(null);
 
-	const product = {
-		price: 77.77,
-		description: "Landing Page - Base Plan"
-	}
+	// const product = {
+	// 	price: 77.77,
+	// 	description: "Landing Page - Base Plan"
+	// }
 
 	useEffect(() => {
 		if (!loadState.loading && !loadState.loaded) {
@@ -36,13 +36,13 @@ export default function PaypalCheckOut() {
 						return actions.order.create({
 							purchase_units: [
 								{
-									description: product.description,
+									description: plan.description,
 									amount: {
 										currency_code: "USD",
-										value: product.price
+										value: plan.price
 									}
 								}
-							]
+							],
 						});
 					},
 					onApprove: async (data: any, actions: any) => {
@@ -58,10 +58,10 @@ export default function PaypalCheckOut() {
 	return (
 		<div>
 			{paidFor ? (
-				<div>Bienvenido, tu landing ya se está creando...</div>
+				// TODO: Si ya pago se deberia enviar a una pagina de agradecimiento que le muestre que su proyecto esta listo
+				<></>
 			) : (
 				<div>
-					<h3>Plan 1</h3>
 					<div ref={paypalRef}></div>
 				</div>
 			)}

@@ -31,7 +31,6 @@ export default function Home() {
       <Beneficios />
       <Testimony />
       <Banner />
-      <Plans />
       <Faqs/>
     </>
   );
