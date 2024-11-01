@@ -23,6 +23,7 @@ export default function Beneficios() {
 				<h2 className="jtm-title mb-[32px]">Beneficios</h2>
 				<div className="w-[950px] max-w-full mx-auto relative">
 					<div className="absolute flex items-center justify-center w-full h-full">
+						<img className="absolute z-50 h-[305px] w-auto" src="/images/luta-beneficios.webp" alt="" />
 						<div className="absolute size-[332px] highlightBg rounded-full"></div>
 						<div className="scan-animation --1 absolute highlightBorder rounded-full"></div>
 						<div className="scan-animation --2 absolute highlightBorder rounded-full"></div>
@@ -32,7 +33,7 @@ export default function Beneficios() {
 							BENEFICIOS.map((beneficio) => { 
 								return(
 									<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-										<img className="size-[24px] bg-red-500" src="/" alt="" />
+										<img className="size-[24px] bg-red-500" src="/images/" alt={beneficio.titulo} />
 										<h3 className="text-[22px] font-bold my-[16px]">{beneficio.titulo}</h3>
 										<p className="font-normal text-[16px]">{beneficio.descripcion}</p>
 									</div>

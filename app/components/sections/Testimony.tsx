@@ -9,29 +9,19 @@ const Testimony = () => {
 
 	const TESTIMONIOS = [
 		{
-			nombre: "Matias Sanchez Sorondo",
-			texto: "El salto de calidad que tuve en el diseño y rendimiento de mi Landing Page con Tomi fue increíble. Me puso algo completamente nuevo y superior sobre la mesa.",
-			img: "/images/foto-mati.webp"
+			nombre: "Carolina Méndez, Psicóloga",
+			texto: "Llené un formulario en minutos y LUTA hizo el resto. Mi página se creó sola, con un diseño profesional que atrajo a nuevos pacientes en poco tiempo.",
+			img: "/images/testimonio-1.webp"
 		},
 		{
-			nombre: "Alexis Mois Corona",
-			texto: "La dedicación, el orden y el cuidado por los detalles hacen del trabajo de Tomás que sea una excelente opcion para trabajar con nuestra agencia.",
-			img: "/images/foto-alex.webp"
+			nombre: "Javier Rodríguez, Coach",
+			texto: 'Nunca había sido tan fácil tener una página profesional. Llené el formulario y LUTA generó todo el contenido. Mis clientes ahora encuentran mis servicios de forma clara y rápida.',
+			img: "/images/testimonio-2.webp"
 		},
 		{
-			nombre: "Vicente Calderon",
-			texto: 'Un gustazo trabajar con Tomas, la gran combinación de calidad y rapidez, en 7 días logro crear exactamente la idea que tenía en mi mente de mi página web.',
-			img: "/images/foto-vicente.png"
-		},
-		{
-			nombre: "Vicente Calderon",
-			texto: 'Un gustazo trabajar con Tomas, la gran combinación de calidad y rapidez, en 7 días logro crear exactamente la idea que tenía en mi mente de mi página web.',
-			img: "/images/foto-vicente.png"
-		},
-		{
-			nombre: "Vicente Calderon",
-			texto: 'Un gustazo trabajar con Tomas, la gran combinación de calidad y rapidez, en 7 días logro crear exactamente la idea que tenía en mi mente de mi página web.',
-			img: "/images/foto-vicente.png"
+			nombre: "Daniela Pérez, Nutricionista",
+			texto: "Con LUTA, solo llené un formulario y en minutos tenía una página funcional y bien hecha. Ahora mis pacientes encuentran toda la información que necesitan y pueden agendar sin complicaciones.",			
+			img: "/images/testimonio-3.webp"
 		},
 	]
 
@@ -58,13 +48,15 @@ const Testimony = () => {
 							TESTIMONIOS.map((testimonio) => {
 								return (
 									<SwiperSlide>
-										<div className="py-[60px] px-[40px] rounded-[8px] bg-[#FFF] highlightBorder">
-											<p className="text-4 text-[#111]">"{testimonio.texto}"</p>
-											<div className="flex gap-2 mt-4">
-												<img className="bg-red-500 size-12 rounded-full" src={testimonio.img} alt={testimonio.nombre + " - Tomas Costa LP"} />
-												<div>
-													<span>stars aca</span>
-													<h5 className="text-4">{testimonio.nombre}</h5>
+										<div className="py-[60px] h-[380px] px-[40px] rounded-[8px] bg-[#FFF] highlightBorder">
+											<div className="flex flex-col justify-between h-full">
+												<p className="text-4 text-[#111]">"{testimonio.texto}"</p>
+												<div className="flex gap-2">
+													<img className="border-[2px] highlightBorder size-[55px] rounded-full" src={testimonio.img} alt={testimonio.nombre + " - Tomas Costa LP"} />
+													<div>
+														<h5 className="text-[14px] mb-2 font-semibold">{testimonio.nombre}</h5>
+														<img className="h-4" src="/images/luta-stars.webp" alt="5 estrellas" />
+													</div>
 												</div>
 											</div>
 										</div>

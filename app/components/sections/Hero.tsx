@@ -13,8 +13,8 @@ const Hero = () => {
               más barato.
             </h1>
             <p className="mt-[16px] mb-[32px] text-[16px] mx-auto text-[#111]/80">
-              Lanza tu sitio web profesional en 2 minutos y sin complicaciones.
-              Diseñado específicamente para profesionales de la salud, nuestra
+              Lanza tu sitio web profesional en <strong>2 minutos</strong> y <strong>sin complicaciones</strong>.
+              Diseñado para profesionales de la salud, nuestra
               herramienta te permite crear una landing page atractiva y
               funcional a <strong>1/3 del precio de mercado</strong> y{" "}
               <strong>3 veces más efectiva</strong>.
