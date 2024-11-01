@@ -38,7 +38,9 @@ Es simple... La verdad es que para que tu página rinda bien no hacen falta much
 Esas son las únicas cosas que NECESITA una Landing Page para funcionar excelente. Y yo no sé esto solo por los 4 años que llevo haciéndolo (la mayoría lleva mucho más y ni les preguntes). 
 Lo sé porque me obsesiona este mundo, y esa obsesión es lo que hace que me moleste ver cómo venden porquerías. 
 
-Ahora... poniéndonos un poco más técnicos, lo que hace el sistema es usar secciones diseñadas por mí, pensadas para profesionales de la salud, y juntarlas con textos generados con inteligencia artificial según la información que colocaste en el formulario. Eso es lo que hace la diferencia.`
+Ahora... poniéndonos un poco más técnicos, lo que hace el sistema es usar secciones diseñadas por mí, pensadas para profesionales de la salud, y juntarlas con textos generados con inteligencia artificial según la información que colocaste en el formulario. 
+
+Eso es lo que la diferencia de la pagina lenta, con textos sin vida y pesimamente diseñada que vende el 90%.`
 		  },		  
 	]
 
