@@ -17,34 +17,34 @@ export default function PlansPage() {
 				"Optimización avanzada para la conversión",
 			],
 		},
-		{
-		  name: "Stelar Plan",
-		  price: 120,
-		  yearlyBilled: true,
-		  description: "Landing Page - Stelar Plan",
-		  includes: [
-			"Listo para usar en 2 minutos",
-			"Textos personalizados y optimizados para SEO potenciado con IA",
-			"Diseño pensado para profesionales de la salud",
-			"Contacto 24/7",
-			"Integración con herramientas de marketing",
-			"Optimización avanzada para la conversión",
-		  ],
-		},
-		{
-		  name: "Custom Plan",
-		  price: 600,
-		  yearlyBilled: false,
-		  description: "Landing Page - Custom Plan",
-		  includes: [
-			"Textos personalizados y optimizados para SEO potenciado con IA",
-			"Diseño único y personalizado adaptado a vos",
-			"Soporte técnico de 6 meses",
-			"Integración avanzada con herramientas de marketing",
-			"Optimización avanzada para la conversión",
-			"Creación de imagenes a medida",
-		  ],
-		},
+		// {
+		//   name: "Stelar Plan",
+		//   price: 120,
+		//   yearlyBilled: true,
+		//   description: "Landing Page - Stelar Plan",
+		//   includes: [
+		// 	"Listo para usar en 2 minutos",
+		// 	"Textos personalizados y optimizados para SEO potenciado con IA",
+		// 	"Diseño pensado para profesionales de la salud",
+		// 	"Contacto 24/7",
+		// 	"Integración con herramientas de marketing",
+		// 	"Optimización avanzada para la conversión",
+		//   ],
+		// },
+		// {
+		//   name: "Custom Plan",
+		//   price: 600,
+		//   yearlyBilled: false,
+		//   description: "Landing Page - Custom Plan",
+		//   includes: [
+		// 	"Textos personalizados y optimizados para SEO potenciado con IA",
+		// 	"Diseño único y personalizado adaptado a vos",
+		// 	"Soporte técnico de 6 meses",
+		// 	"Integración avanzada con herramientas de marketing",
+		// 	"Optimización avanzada para la conversión",
+		// 	"Creación de imagenes a medida",
+		//   ],
+		// },
 	]
 
 	return (

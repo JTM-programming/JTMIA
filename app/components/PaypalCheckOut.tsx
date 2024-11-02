@@ -13,17 +13,12 @@ export default function PaypalCheckOut({plan}: any) {
 
 	const paypalRef = useRef<HTMLDivElement>(null);
 
-	// const product = {
-	// 	price: 77.77,
-	// 	description: "Landing Page - Base Plan"
-	// }
-
 	useEffect(() => {
 		if (!loadState.loading && !loadState.loaded) {
 			setLoadState({ loading: true, loaded: false });
 
 			const script = document.createElement('script');
-			script.src = `https://sandbox.paypal.com/sdk/js?client-id=${process.env.NEXT_PUBLIC_PYPL_CLIENT_ID}&currency=USD`;
+			script.src = `https://www.paypal.com/sdk/js?client-id=${process.env.NEXT_PUBLIC_PYPL_CLIENT_ID}&currency=USD&vault=true`;
 			script.addEventListener('load', () => setLoadState({ loading: false, loaded: true }));
 			document.body.appendChild(script);
 		}
@@ -31,24 +26,25 @@ export default function PaypalCheckOut({plan}: any) {
 		if (loadState.loaded) {
 			window.paypal
 				.Buttons({
-					// TODO: Cambiar por suscripcion (Ref al final de este doc)
-					createOrder: (data: any, actions: any) => {
-						return actions.order.create({
-							purchase_units: [
-								{
-									description: plan.description,
-									amount: {
-										currency_code: "USD",
-										value: plan.price
-									}
-								}
-							],
-						});
+					style: {
+						shape: 'rect',
+						color: 'gold',
+						layout: 'vertical',
+						label: 'subscribe'
 					},
-					onApprove: async (data: any, actions: any) => {
-						const order = await actions.order.capture();
+					createSubscription: function(data: any, actions: any) {
+					  return actions.subscription.create({
+						plan_id: 'P-3VT75497KL146340GM4TI5XY'
+					  });
+					},
+					onApprove: function(data: any, actions: any) {
 						setPaidFor(true);
-						console.log(order);
+						console.log("El usuario completo el pago: ", data)
+
+						// TODO: Cargar el plan pagado en supabase
+						// codigo...
+
+						window.location.href = '/generating-landing';
 					}
 				})
 				.render(paypalRef.current);
@@ -56,28 +52,8 @@ export default function PaypalCheckOut({plan}: any) {
 	}, [loadState]);
 
 	return (
-		<div>
-			{paidFor ? (
-				// TODO: Si ya pago se deberia enviar a una pagina de agradecimiento que le muestre que su proyecto esta listo
-				<></>
-			) : (
-				<div>
-					<div ref={paypalRef}></div>
-				</div>
-			)}
+		<div ref={paypalRef}>
+
 		</div>
 	)
 }
-
-// createOrder: (data: any, actions: any) => {
-//     return actions.subscription.create({
-//         plan_id: 'YOUR_PLAN_ID', // Reemplaza esto con el ID de tu plan de suscripción
-//         subscriber: {
-//             email_address: 'customer@example.com' // Cambia esto por el email del cliente
-//         },
-//         application_context: {
-//             return_url: 'https://tusitio.com/return', // URL de retorno después de la suscripción
-//             cancel_url: 'https://tusitio.com/cancel' // URL de cancelación
-//         }
-//     });
-// },
