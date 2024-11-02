@@ -9,21 +9,26 @@ export default function CreateLanding() {
 	const [landingGoal, setLandingGoal] = useState<string>('');
 	const [targetAudience, setTargetAudience] = useState<string>('');
 	const [beneficts, setBeneficts] = useState<string>('');
-	const [email, setEmail] = useState<string>('');
 	const [story, setStory] = useState<string>('');
+	const [email, setEmail] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
 
 	const handleSubmit = async () => {
 		try {
-			await axios.post("/api/openai", {
+			const response = await axios.post("/api/supabase/create-user", {
 				businessName,
 				businessDescription,
 				landingGoal,
 				targetAudience,
 				beneficts,
+				story,
 				email,
-				story
+				password
 			});
-			window.location.href = "#!";
+
+			console.log(response.headers.location);
+
+			window.location.href = response.headers.location;
 		} catch {
 
 		}
@@ -126,22 +131,22 @@ export default function CreateLanding() {
 							type="text"
 						/>
 					</label>
-					<label className="block mb-4" htmlFor="email">
+					<label className="block mb-4" htmlFor="password">
 						Contraseña
 						<input
-							onChange={(e) => { setEmail(e.target.value) }}
+							onChange={(e) => { setPassword(e.target.value) }}
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="password"
 						/>
 					</label>
-					<label className="block mb-4" htmlFor="email">
+					{/* <label className="block mb-4" htmlFor="email">
 						Repeti tu contraseña
 						<input
 							onChange={(e) => { setEmail(e.target.value) }}
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="password"
 						/>
-					</label>
+					</label> */}
 					<button
 						type='submit'
 						className='bg-[#115CFF] w-full mt-8 text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center'
