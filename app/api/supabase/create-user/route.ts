@@ -42,16 +42,6 @@ export async function POST(request: NextRequest) {
 
 	console.log(newUserError, newUserDataError)
 
-	// Iniciar sesión del usuario
-	const { data: session, error: signInError } = await supabase.auth.signInWithPassword({
-    	email: email,
-    	password: password,
-  	});
-
-  	if (signInError) {
-    	return NextResponse.json({ error: signInError.message }, { status: 400 });
-  	}
-
   	// Redirigir al usuario a la página de planes
   	const response = NextResponse.json({ message: "User created and logged in successfully" });
   	response.headers.set("Location", "/plans"); // Cambia "/planes" a la URL de la página de planes
