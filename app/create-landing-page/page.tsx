@@ -114,7 +114,7 @@ export default function CreateLanding() {
 							El color de textos debe ser lo más opuesto posible al color de fondo para que los textos sean altamente legibles.
 						</p>
 					</label>
-					<label className='block mt-4'>
+					<label className='block my-4'>
 						<span className='block'>Selecciona el color para botones:</span>
 						<div className="flex gap-4 my-2">
 							<input className="size-[60px] cursor-pointer" type="color" id="button" name="button" value="#cc0000" />

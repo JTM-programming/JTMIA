@@ -3,7 +3,7 @@ import CustomButton from '@/app/components/CustomButton'
 
 const Hero = () => {
   return (
-    <section className="py-[80px] pt-[20px] md:pb-[100px]">
+    <section className="py-[60px] pt-[20px] md:pb-[80px]">
       <div className="jtm-container">
         <div className="flex items-center flex-col-reverse md:flex-row gap-[16px]">
           <div className="max-w-full w-[700px]">
