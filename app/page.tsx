@@ -32,7 +32,7 @@ export default function Home() {
       <Testimony />
       <Banner />
       <Faqs/>
-      <p className="py-[16px] text-center text-[#000]/80">
+      <p className="py-8 text-center text-[#000]/80">
         ©LUTA 2024. Todos los derechos reservados
       </p>
     </>

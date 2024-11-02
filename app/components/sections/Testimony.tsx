@@ -28,7 +28,7 @@ const Testimony = () => {
 	return (
 		<section className="py-[60px] md:py-[80px]">
 			<div className="jtm-container">
-				<h2 className="jtm-title mb-8">Profesionales que eligieron bien</h2>
+				<h2 className="jtm-title mb-8">Profesionales que supieron elegir...</h2>
 				<div className="relative">
 					<Swiper
 						modules={[Navigation]}

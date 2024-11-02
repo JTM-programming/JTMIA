@@ -40,7 +40,7 @@ Lo sé porque me obsesiona este mundo, y esa obsesión es lo que hace que me mol
 
 Ahora... poniéndonos un poco más técnicos, lo que hace el sistema es usar secciones diseñadas por mí, pensadas para profesionales de la salud, y juntarlas con textos generados con inteligencia artificial según la información que colocaste en el formulario. 
 
-Eso es lo que la diferencia de la pagina lenta, con textos sin vida y pesimamente diseñada que vende el 90%.`
+Eso es lo que la diferencia de la pagina lenta, con textos sin vida y pesimamente diseñada que te vende la mayoria.`
 		  },		  
 	]
 
