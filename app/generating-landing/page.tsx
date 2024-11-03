@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { createClient, User } from '@supabase/supabase-js';
+import axios from 'axios';
 
 // Configura el cliente de Supabase
 const supabaseUrl = process.env.NEXT_PUBLIC_PROJECT_URL || "";
@@ -20,8 +21,9 @@ type UserData = {
 };
 
 export default function GeneratingLanding() {
-	const [userData, setUserData] = useState<UserData | null>(null); // Estado para datos del usuario
-	const [user, setUser] = useState<User | null>(null); // Estado para el usuario logueado
+	const [userData, setUserData] = useState<UserData | null>(null);
+	const [user, setUser] = useState<User | null>(null);
+	const [textsFetched, setTextsFetched] = useState(false);
 
 	useEffect(() => {
 		// Función para obtener la sesión y datos del usuario
@@ -47,30 +49,65 @@ export default function GeneratingLanding() {
 					console.error('Error fetching user data:', error);
 				} else {
 					setUserData(data[0]);
-					console.log(data)
 				}
 			}
 		};
 
 		fetchUserData();
+
 	}, []);
+
+	useEffect(() => {
+
+		// Funcion para obtener el JSON con los textos de la landing
+		const generateLandingTexts = async () => {
+	
+			const businessName = userData?.nombre_negocio
+			const businessDescription = userData?.descripcion_negocio
+			const landingGoal = userData?.objetivo_landing
+			const targetAudience = userData?.audiencia_objetivo
+			const beneficts = userData?.beneficios
+			const story = userData?.historia
+			const email = userData?.email
+	
+			const response = await axios.post("/api/openai", {
+				businessName,
+				businessDescription,
+				landingGoal,
+				targetAudience,
+				beneficts,
+				story,
+				email,
+			});
+	
+			const cleanContent = response.data.content.replace(/```json|```/g, ""); // Elimina caracteres ``
+			const texts = JSON.parse(cleanContent);
+	
+			// console.log("JSON", response.data.content);
+			console.log("Textos", texts);
+		}
+
+		// Funcion para crear las secciones de Landing
+		const createLandingSections = () => {
+	
+		}
+		// Funcion para crear el archivo de la nueva pagina
+		const createLandingFolder = () => {
+	
+		}
+
+		// Evitamos que los genere mas de una vez
+		if (!textsFetched) {
+			generateLandingTexts();
+			setTextsFetched(true);
+			console.log(textsFetched)
+		}
+
+	}, [userData])
 
 	return (
 		<div>
-			{userData ? (
-				<div>
-					<h1>Datos del Usuario</h1>
-					<p>Nombre del Negocio: {userData.nombre_negocio}</p>
-					<p>Descripción del Negocio: {userData.descripcion_negocio}</p>
-					<p>Objetivo Landing: {userData.objetivo_landing}</p>
-					<p>Audiencia Objetivo: {userData.audiencia_objetivo}</p>
-					<p>Beneficios: {userData.beneficios}</p>
-					<p>Historia: {userData.historia}</p>
-					<p>Email: {userData.email}</p>
-				</div>
-			) : (
-				<p>Cargando datos...</p>
-			)}
+			Cargando...
 		</div>
 	);
 }

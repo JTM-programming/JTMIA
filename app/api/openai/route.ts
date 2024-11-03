@@ -5,7 +5,7 @@ import OpenAI from "openai";
 export async function POST(request: NextRequest){
     
     const openai = new OpenAI({
-        apiKey: process.env.OPENAI_API_KEY,
+        apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     }); 
 
     // Tomamos los datos que enviamos desde el form
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest){
                         
                         Los 4 principales beneficios que obtienen mis clientes son ${beneficts}
     
-                        Es OBLIGATORIO que respetes la estructura del JSON y la respuesta no incluya NADA más que este, ya que va a ser convertido a un objeto JS.
+                        Es OBLIGATORIO que respetes la estructura del JSON y sea valido, y la respuesta no incluya NADA más que este, ya que va a ser convertido a un objeto JS.
     
                         {
                         "CTA": "Texto de llamada a la acción claro y directo que invite al usuario a ${landingGoal}. Orientado en primera persona (3/4 palabras como maximo)",
