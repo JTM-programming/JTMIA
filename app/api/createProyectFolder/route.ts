@@ -6,8 +6,8 @@ export async function POST(req: NextRequest) {
   try {
     const { folderName, copies } = await req.json();
 
-    console.log("nombre de carpeta recibido en createProyectFOlder", folderName)
-    console.log("copies recividos en createProyectFOlder", copies)
+    console.log("Nombre de carpeta recibido en createProyectFolder:", folderName);
+    console.log("Copies recibidos en createProyectFolder:", copies);
 
     const folderPath = path.join(process.cwd(), 'app/pages', folderName || 'nueva_carpeta');
 
@@ -24,26 +24,28 @@ export async function POST(req: NextRequest) {
     // Contenido para el archivo `page.tsx`
     const fileContent = `
 "use client";
-import Banner from "@/app/components/sections/Banner";
-import Beneficios from "@/app/components/sections/Beneficios";
-import Header from "@/app/components/sections/Header";
-import Hero from "@/app/components/sections/Hero";
-import MovingSpan from "@/app/components/sections/MovingSpan";
-import Testimony from "@/app/components/sections/Testimony";
-import Faqs from '@/app/components/sections/Faqs';
+import Banner from "@/app/components/templateSections/Banner";
+import Beneficios from "@/app/components/templateSections/Beneficios";
+import Header from "@/app/components/templateSections/Header";
+import Hero from "@/app/components/templateSections/Hero";
+import MovingSpan from "@/app/components/templateSections/MovingSpan";
+import Testimony from "@/app/components/templateSections/Testimony";
+import Faqs from "@/app/components/templateSections/Faqs";
 
 export default function Home() {
+  const beneficiosData = ${JSON.stringify(copies.Beneficios.Lista)};
+  const testimoniosData = ${JSON.stringify(copies.Testimonios.Lista)};
+  const preguntasData = ${JSON.stringify(copies.Preguntas.Lista)};
 
   return (
     <>
-      ${copies}
       <Header />
-      <Hero />
+      <Hero titulo="${copies.Hero.Titulo}" descripcion="${copies.Hero.Descripcion}" />
       <MovingSpan />
-      <Beneficios />
-      <Testimony />
-      <Banner />
-      <Faqs/>
+      <Beneficios titulo="${copies.Beneficios.Titulo}" beneficios={beneficiosData} />
+      <Testimony titulo="${copies.Testimonios.Titulo}" testimonios={testimoniosData} />
+      <Banner text="${copies.SeccionCTA}" />
+      <Faqs titulo="${copies.Preguntas.Titulo}" preguntas={preguntasData} />
       <p className="py-8 text-center text-[#000]/80">
         ©LUTA 2024. Todos los derechos reservados
       </p>
