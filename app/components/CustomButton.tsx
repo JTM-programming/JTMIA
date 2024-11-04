@@ -14,7 +14,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({customClasses}) => {
 			`}
 		>
 			<a 
-				href="/create-landing-page" 
+				href="/utils/create-landing-page" 
 				className={`
 					bg-[#115CFF] text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center
 				`} 

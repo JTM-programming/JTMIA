@@ -1,4 +1,3 @@
-// app/api/createProyectFolder/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
@@ -34,7 +33,7 @@ export default function Page() {
     // Escribe el archivo `page.tsx` con el contenido
     fs.writeFileSync(filePath, fileContent, 'utf8');
 
-    return NextResponse.json({ message: `Carpeta y archivo page.tsx creados en app/_pages/${folderName}` });
+    return NextResponse.json({ message: `Carpeta y archivo page.tsx creados en app/pages/${folderName}` });
   } catch (error) {
     return NextResponse.json({ message: 'Error al crear la carpeta o el archivo', error }, { status: 500 });
   }

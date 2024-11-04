@@ -30,7 +30,7 @@ export default function GeneratingLanding() {
 		const fetchUserData = async () => {
 			// Obtener el usuario logueado
 			const { data: { user }, error: sessionError } = await supabase.auth.getUser();
-			
+
 			if (sessionError) {
 				console.error('Error fetching user session:', sessionError);
 				return;
@@ -61,7 +61,7 @@ export default function GeneratingLanding() {
 
 		// Funcion para obtener el JSON con los textos de la landing
 		const generateLandingTexts = async () => {
-	
+
 			const businessName = userData?.nombre_negocio
 			const businessDescription = userData?.descripcion_negocio
 			const landingGoal = userData?.objetivo_landing
@@ -69,7 +69,7 @@ export default function GeneratingLanding() {
 			const beneficts = userData?.beneficios
 			const story = userData?.historia
 			const email = userData?.email
-	
+
 			const response = await axios.post("/api/openai", {
 				businessName,
 				businessDescription,
@@ -79,10 +79,10 @@ export default function GeneratingLanding() {
 				story,
 				email,
 			});
-	
+
 			const cleanContent = response.data.content.replace(/```json|```/g, ""); // Elimina caracteres ``
 			const texts = JSON.parse(cleanContent);
-	
+
 			// console.log("JSON", response.data.content);
 			console.log("Textos", texts);
 		}
@@ -90,25 +90,31 @@ export default function GeneratingLanding() {
 		// Funcion para crear el archivo de la nueva pagina con las secciones listas
 		const createLandingFolder = async () => {
 			try {
-
 				const formattedName = userData?.nombre_negocio
 					?.toLowerCase()
 					.replace(/\s+/g, '-') || '';
 
-				const response = await fetch('/api/createProyectFolder', {
-				  method: 'POST',
-				  headers: {
-					'Content-Type': 'application/json',
-				  },
-				  body: JSON.stringify({ folderName: formattedName }),
-				});
-				
-				const data = await response.json();
+				console.log('Nombre formateado:', formattedName);
 
-				window.location.href = `/pages/${formattedName}`
+				await fetch('/api/createProyectFolder', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ folderName: formattedName }),
+				})
+				.then(response => {
+				  if (!response.ok) {
+					throw new Error('Error en la respuesta');
+				  }
+				  return response.json();
+				})
+				.then(data => {
+				  console.log('Carpeta creada exitosamente:', data.message);
+				  window.location.href = `/pages/${formattedName}`;
+				})
 
-				console.log(data.message);
-			  } catch (error) {
+			} catch (error) {
 				console.error('Error:', error);
 			}
 		}
@@ -126,6 +132,7 @@ export default function GeneratingLanding() {
 
 	return (
 		<div>
+			{/* TODO: Hacer mas bonito */}
 			Cargando...
 		</div>
 	);

@@ -20,10 +20,10 @@ export async function POST(request: NextRequest){
      } = await request.json();
 
 
-     console.log("PASA LA DEFINICION");
+    //  console.log("PASA LA DEFINICION");
 
     try {
-        console.log("ENTRA AL TRY");
+        // console.log("ENTRA AL TRY");
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest){
             ],
         });
     
-        console.log(completion.choices[0].message);
+        // console.log(completion.choices[0].message);
         return NextResponse.json(completion.choices[0].message);
 
     } catch {
