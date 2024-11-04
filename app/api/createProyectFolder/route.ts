@@ -41,7 +41,7 @@ export default function Home() {
     <>
       <Header />
       <Hero titulo="${copies.Hero.Titulo}" descripcion="${copies.Hero.Descripcion}" />
-      <MovingSpan />
+      <MovingSpan span="${folderName}" />
       <Beneficios titulo="${copies.Beneficios.Titulo}" beneficios={beneficiosData} />
       <Testimony titulo="${copies.Testimonios.Titulo}" testimonios={testimoniosData} />
       <Banner text="${copies.SeccionCTA}" />

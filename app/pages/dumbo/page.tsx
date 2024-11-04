@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Header />
       <Hero titulo="Transformación Personal y Profesional" descripcion="En DUMBO, te ayudo a alcanzar tus metas y sueños con un enfoque único y personalizado que garantiza resultados tangibles." />
-      <MovingSpan />
+      <MovingSpan span="dumbo" />
       <Beneficios titulo="¿Qué obtendrás con DUMBO?" beneficios={beneficiosData} />
       <Testimony titulo="Lo que dicen nuestros clientes" testimonios={testimoniosData} />
       <Banner text="¡No esperes más! Da el primer paso hoy mismo." />
