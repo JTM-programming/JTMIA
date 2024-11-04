@@ -102,8 +102,11 @@ export default function GeneratingLanding() {
 				  },
 				  body: JSON.stringify({ folderName: formattedName }),
 				});
-			
+				
 				const data = await response.json();
+
+				window.location.href = `/pages/${formattedName}`
+
 				console.log(data.message);
 			  } catch (error) {
 				console.error('Error:', error);
