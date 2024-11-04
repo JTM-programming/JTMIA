@@ -1,3 +1,4 @@
+
 "use client";
 import Banner from "@/app/components/sections/Banner";
 import Beneficios from "@/app/components/sections/Beneficios";
@@ -6,7 +7,6 @@ import Hero from "@/app/components/sections/Hero";
 import MovingSpan from "@/app/components/sections/MovingSpan";
 import Testimony from "@/app/components/sections/Testimony";
 import Faqs from '@/app/components/sections/Faqs';
-import axios from "axios";
 
 export default function Home() {
 
@@ -25,3 +25,4 @@ export default function Home() {
     </>
   );
 }
+
