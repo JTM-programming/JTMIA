@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
   	// Redirigir al usuario a la página de planes
   	const response = NextResponse.json({ message: "User created and logged in successfully" });
-  	response.headers.set("Location", "/plans"); // Cambia "/planes" a la URL de la página de planes
+  	response.headers.set("Location", "/plans");
 
   	return response;
 

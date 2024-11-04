@@ -87,13 +87,27 @@ export default function GeneratingLanding() {
 			console.log("Textos", texts);
 		}
 
-		// Funcion para crear las secciones de Landing
-		const createLandingSections = () => {
-	
-		}
-		// Funcion para crear el archivo de la nueva pagina
-		const createLandingFolder = () => {
-	
+		// Funcion para crear el archivo de la nueva pagina con las secciones listas
+		const createLandingFolder = async () => {
+			try {
+
+				const formattedName = userData?.nombre_negocio
+					?.toLowerCase()
+					.replace(/\s+/g, '-') || '';
+
+				const response = await fetch('/api/createProyectFolder', {
+				  method: 'POST',
+				  headers: {
+					'Content-Type': 'application/json',
+				  },
+				  body: JSON.stringify({ folderName: formattedName }),
+				});
+			
+				const data = await response.json();
+				console.log(data.message);
+			  } catch (error) {
+				console.error('Error:', error);
+			}
 		}
 
 		// Evitamos que los genere mas de una vez
@@ -102,6 +116,8 @@ export default function GeneratingLanding() {
 			setTextsFetched(true);
 			console.log(textsFetched)
 		}
+		// createLandingSections();
+		createLandingFolder();
 
 	}, [userData])
 
