@@ -75,29 +75,34 @@ export default function GeneratingLanding() {
 	};
 
 	return (
-		<div>
-			<h1>Upload Images for {userData?.nombre_negocio}</h1>
-			<form onSubmit={(e) => { e.preventDefault(); handleImageUpload(); }}>
-				<div>
-					<label htmlFor="image1">Image 1:</label>
-					<input
-						type="file"
-						id="image1"
-						accept="image/*"
-						onChange={(e) => setImage1(e.target.files?.[0] || null)}
-					/>
-				</div>
-				<div>
-					<label htmlFor="image2">Image 2:</label>
-					<input
-						type="file"
-						id="image2"
-						accept="image/*"
-						onChange={(e) => setImage2(e.target.files?.[0] || null)}
-					/>
-				</div>
-				<button type="submit">Upload Images</button>
-			</form>
-		</div>
+		<section className='py-[80px]'>
+			<div className="max-w-[484px] mx-auto">
+				<span className="block text-center text-[18px] font-bold text-[#2C6FFF]">Las imagenes son de lo más importante en un sitio web...</span>
+				<h1 className='text-center text-[28px] font-bold leading-[120%] mt-4 mb-8'>Subi las imagenes que queres en la Landing de {userData?.nombre_negocio}</h1>
+				<form onSubmit={(e) => { e.preventDefault(); handleImageUpload(); }}>
+					<div className='mb-4'>
+						<label htmlFor="image1">Imagen 1:</label>
+						<input
+							className='block'
+							type="file"
+							id="image1"
+							accept="image/*"
+							onChange={(e) => setImage1(e.target.files?.[0] || null)}
+						/>
+					</div>
+					<div>
+						<label htmlFor="image2">Imagen 2:</label>
+						<input
+							className='block'
+							type="file"
+							id="image2"
+							accept="image/*"
+							onChange={(e) => setImage2(e.target.files?.[0] || null)}
+						/>
+					</div>
+					<button className='bg-[#115CFF] w-full mt-8 text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center' type="submit">Subir imagenes</button>
+				</form>
+			</div>
+		</section>
 	);
 }
