@@ -1,5 +1,5 @@
 import React from "react";
-import CustomButton from '@/app/components/CustomButton';
+import ClientsButton from '@/app/components/templateSections/ClientsButton';
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -68,7 +68,7 @@ const Testimony = ({ titulo, testimonios }: TestimonyProps) => {
             </svg>
           </button>
         </div>
-        <CustomButton customClasses="mx-auto mt-8" />
+        <ClientsButton customClasses="mx-auto mt-8" />
       </div>
     </section>
   );

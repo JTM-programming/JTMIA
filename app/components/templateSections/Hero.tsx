@@ -1,5 +1,5 @@
 import React from "react";
-import CustomButton from '@/app/components/CustomButton'
+import ClientsButton from '@/app/components/templateSections/ClientsButton'
 
 const Hero = ({titulo, descripcion}: any) => {
   return (
@@ -14,7 +14,7 @@ const Hero = ({titulo, descripcion}: any) => {
             <p className="mt-[16px] mb-[32px] text-[16px] mx-auto luta-text-color">
               {descripcion}
             </p>
-            <CustomButton customClasses="text-white" />
+            <ClientsButton customClasses="text-white" />
             <img className="mt-4 h-[40px] object-contain" src="/images/" alt="" />
           </div>
           {false ? ( // Si el usuario marco que quiere un VSL

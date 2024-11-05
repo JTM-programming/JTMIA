@@ -52,16 +52,19 @@ export default function Home() {
       </p>
       <style>{\`
         .luta-text-color {
-          color: ${colors[0]};
+          color: ${colors[2]};
         }
         .luta-bg-color {
-          background-color: ${colors[1]};
+          background-color: ${colors[0]};
         }
         .highlightBorder {
-          border-color: ${colors[2]} !important;
+          border-color: ${colors[0]} !important;
         }
         .luta-btn-color {
-          color: ${colors[3]};
+          background-color: ${colors[3]};
+        }
+        .luta-foreground-color {
+          background-color: ${colors[1]};
         }
       \`}</style>
     </>

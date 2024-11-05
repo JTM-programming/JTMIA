@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-interface CustomButtonProps {
+interface ClientsButtonProps {
 	customClasses?: string;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({customClasses}) => {
+const ClientsButton: React.FC<ClientsButtonProps> = ({customClasses}) => {
 
 	return (
 		<div 
@@ -16,7 +16,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({customClasses}) => {
 			<a 
 				href="/utils/create-landing-page" 
 				className={`
-					bg-[#115CFF] text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center
+					luta-btn-color text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center
 				`} 
 			>Crear mi Landing en 2 minutos</a>
 			<span className='text-[14px] mt-[8px] text-center text-[#111]/80 block'>PD: La oferta termina hoy.</span>
@@ -24,4 +24,4 @@ const CustomButton: React.FC<CustomButtonProps> = ({customClasses}) => {
 	)
 }
 
-export default CustomButton
+export default ClientsButton
