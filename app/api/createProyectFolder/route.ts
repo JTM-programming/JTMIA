@@ -18,6 +18,10 @@ export async function POST(req: NextRequest) {
     } else {
       return NextResponse.json({ message: 'La carpeta ya existe' }, { status: 400 });
     }
+    
+    // Crea la carpeta interna `images`
+    const imagesFolderPath = path.join(folderPath, 'images');
+    fs.mkdirSync(imagesFolderPath, { recursive: true });
 
     // Define la ruta para el archivo `page.tsx`
     const filePath = path.join(folderPath, 'page.tsx');
@@ -48,7 +52,7 @@ export default function Home() {
       <Banner text="${copies.SeccionCTA}" />
       <Faqs titulo="${copies.Preguntas.Titulo}" preguntas={preguntasData} />
       <p className="py-8 text-center text-[#000]/80">
-        ©LUTA 2024. Todos los derechos reservados
+        ©${folderName} 2024. Todos los derechos reservados
       </p>
       <style>{\`
         .luta-text-color {
