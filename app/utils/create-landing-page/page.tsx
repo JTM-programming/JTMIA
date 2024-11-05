@@ -16,6 +16,12 @@ export default function CreateLanding() {
 	const [targetAudience, setTargetAudience] = useState<string>('');
 	const [beneficts, setBeneficts] = useState<string>('');
 	const [story, setStory] = useState<string>('');
+	const [colorPalete, setColorPalete] = useState({
+		mainColor: '#e66465',
+		backgroundColor: '#ffffff',
+		textColor: '#000000',
+		buttonColor: '#cc0000'
+	});
 	const [email, setEmail] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
 
@@ -29,7 +35,8 @@ export default function CreateLanding() {
 				beneficts,
 				story,
 				email,
-				password
+				password,
+				colorPalete
 			});
 
 			// Iniciar sesión del usuario
@@ -101,8 +108,14 @@ export default function CreateLanding() {
 					<label className='block mt-4'>
 						<span className='block'>Selecciona el color principal:</span>
 						<div className="flex gap-4 my-2">
-							<input className="size-[60px] cursor-pointer" type="color" id="head" name="head" value="#e66465" />
-
+							<input 
+								className="size-[60px] cursor-pointer" 
+								type="color" 
+								id="head" 
+								name="head" 
+								defaultValue="#e66465" 
+								onChange={(e) => setColorPalete({ ...colorPalete, mainColor: e.target.value })}
+							/>
 						</div>
 						<p className="text-[14px] text-[#111]/70">
 							Este es el color que se va a usar en los detalles del sitio que queremos que tengan un alto grado de importancia, recomendamos que uses alguno de los colores mas importantes de tu marca.
@@ -111,7 +124,14 @@ export default function CreateLanding() {
 					<label className='block mt-4'>
 						<span className='block'>Selecciona el color de fondo:</span>
 						<div className="flex gap-4 my-2">
-							<input className="size-[60px] cursor-pointer" type="color" id="background" name="background" value="#ffffff" />
+							<input 
+								className="size-[60px] cursor-pointer" 
+								type="color" 
+								id="background" 
+								name="background" 
+								defaultValue="#ffffff" 
+								onChange={(e) => setColorPalete({ ...colorPalete, backgroundColor: e.target.value })}
+							/>
 						</div>
 						<p className="text-[14px] text-[#111]/70">
 							Este color se va a usar de fondo, lo ideal es que sea lo más contrastante posible al color principal, por ejemplo, si el principal es rojo, el color de fondo ideal sería un tono de rojo muy claro o muy oscuro.
@@ -120,7 +140,14 @@ export default function CreateLanding() {
 					<label className='block mt-4'>
 						<span className='block'>Selecciona el color de textos:</span>
 						<div className="flex gap-4 my-2">
-							<input className="size-[60px] cursor-pointer" type="color" id="text" name="text" value="#000000" />
+							<input 
+								className="size-[60px] cursor-pointer" 
+								type="color" 
+								id="text" 
+								name="text" 
+								defaultValue="#000000" 
+								onChange={(e) => setColorPalete({ ...colorPalete, textColor: e.target.value })}
+							/>
 						</div>
 						<p className="text-[14px] text-[#111]/70">
 							El color de textos debe ser lo más opuesto posible al color de fondo para que los textos sean altamente legibles.
@@ -129,7 +156,14 @@ export default function CreateLanding() {
 					<label className='block my-4'>
 						<span className='block'>Selecciona el color para botones:</span>
 						<div className="flex gap-4 my-2">
-							<input className="size-[60px] cursor-pointer" type="color" id="button" name="button" value="#cc0000" />
+							<input 
+								className="size-[60px] cursor-pointer"
+								type="color" 
+								id="button" 
+								name="button" 
+								defaultValue="#cc0000" 
+								onChange={(e) => setColorPalete({ ...colorPalete, buttonColor: e.target.value })}
+							/>
 						</div>
 						<p className="text-[14px] text-[#111]/70">
 							Este color debe ser el más llamativo, por lo que se puede usar una versión más saturada o contrastante del color principal. Siguiendo el ejemplo del rojo, se podría usar un rojo más fuerte o un rojo más oscuro si elegiste un fondo claro.

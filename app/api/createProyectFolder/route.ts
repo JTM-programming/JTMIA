@@ -4,10 +4,11 @@ import path from 'path';
 
 export async function POST(req: NextRequest) {
   try {
-    const { folderName, copies } = await req.json();
+    const { folderName, copies, colors } = await req.json();
 
     console.log("Nombre de carpeta recibido en createProyectFolder:", folderName);
     console.log("Copies recibidos en createProyectFolder:", copies);
+    console.log("Colores de sitio:", colors);
 
     const folderPath = path.join(process.cwd(), 'app/pages', folderName || 'nueva_carpeta');
 
@@ -49,6 +50,20 @@ export default function Home() {
       <p className="py-8 text-center text-[#000]/80">
         ©LUTA 2024. Todos los derechos reservados
       </p>
+      <style>{\`
+        .luta-text-color {
+          color: ${colors[0]};
+        }
+        .luta-bg-color {
+          background-color: ${colors[1]};
+        }
+        .highlightBorder {
+          border-color: ${colors[2]} !important;
+        }
+        .luta-btn-color {
+          color: ${colors[3]};
+        }
+      \`}</style>
     </>
   );
 }

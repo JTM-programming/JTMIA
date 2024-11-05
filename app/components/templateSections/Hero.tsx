@@ -3,15 +3,15 @@ import CustomButton from '@/app/components/CustomButton'
 
 const Hero = ({titulo, descripcion}: any) => {
   return (
-    <section className="py-[60px] pt-[20px] md:pb-[b0px]">
+    <section className="py-[60px] pt-[20px] md:pb-[60px]">
       <div className="jtm-container">
         <div className="flex items-center flex-col-reverse md:flex-row gap-[32px]">
           <div className="max-w-full w-[700px]">
-            <h2 className="font-bold text-[#2C6FFF] text-[18px]">NOMBRE DEL NEGOCIO</h2>
+            <h2 className="font-bold luta-text-color text-[18px]">NOMBRE DEL NEGOCIO</h2>
             <h1 className="font-bold mt-[16px] text-[28px] leading-[110%]">
               {titulo}
             </h1>
-            <p className="mt-[16px] mb-[32px] text-[16px] mx-auto text-[#111]/80">
+            <p className="mt-[16px] mb-[32px] text-[16px] mx-auto luta-text-color">
               {descripcion}
             </p>
             <CustomButton customClasses="text-white" />

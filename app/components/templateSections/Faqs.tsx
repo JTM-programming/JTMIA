@@ -20,7 +20,7 @@ export default function Faqs({ titulo, preguntas }: FaqsProps) {
 
   return (
     <div className="max-w-[900px] px-4 mx-auto py-[60px] md:py-[80px]">
-      <h2 className="text-[40px] text-center mb-[40px] font-extrabold text-[#031221] leading-[110%] tracking-[-.5px] max-w-[990px] mx-auto text-balance capitalize">
+      <h2 className="text-[40px] text-center mb-[40px] font-extrabold luta-text-color leading-[110%] tracking-[-.5px] max-w-[990px] mx-auto text-balance capitalize">
         {titulo}
       </h2>
       {preguntas.map((item) => (
@@ -29,7 +29,7 @@ export default function Faqs({ titulo, preguntas }: FaqsProps) {
           onClick={() => toggle(item.Pregunta)}
           className="tc-accordion-item w-full cursor-pointer p-[20px] border-b last:border-none border-[#031221]/50 mb-[10px]"
         >
-          <h3 className="text-[16px] md:text-[18px] text-[#031221] lg:text-[20px] flex justify-between items-center">
+          <h3 className="text-[16px] md:text-[18px] luta-text-color lg:text-[20px] flex justify-between items-center">
             {item.Pregunta}
             <svg
               className={`${
@@ -46,7 +46,7 @@ export default function Faqs({ titulo, preguntas }: FaqsProps) {
               open === item.Pregunta ? 'max-h-[2000px]' : 'max-h-0'
             }`}
           >
-            <p className="text-[#031221]/80 text-[16px] pt-[10px] whitespace-pre-wrap">
+            <p className="luta-text-color text-[16px] pt-[10px] whitespace-pre-wrap">
               {item.Respuesta}
             </p>
           </div>

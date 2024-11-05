@@ -16,7 +16,8 @@ export async function POST(request: NextRequest) {
 		beneficts,
 		story,
 		email,
-		password
+		password,
+		colorPalete
 	 } = await request.json();
 
 	// Crear usuario en supabase auth
@@ -37,6 +38,12 @@ export async function POST(request: NextRequest) {
 			beneficios: beneficts,
 			historia: story,
 			email: email,
+			color_palete: [
+				colorPalete.mainColor,
+				colorPalete.backgroundColor,
+				colorPalete.textColor,
+				colorPalete.buttonColor
+			]
 		})
 		.select()
 
