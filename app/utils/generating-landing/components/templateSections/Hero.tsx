@@ -1,5 +1,5 @@
 import React from "react";
-import ClientsButton from '@/app/components/templateSections/ClientsButton'
+import ClientsButton from '@/app/utils/generating-landing/components/ClientsButton'
 
 const Hero = ({titulo, descripcion, proyecto}: any) => {
   return (

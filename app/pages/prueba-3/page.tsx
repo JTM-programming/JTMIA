@@ -1,12 +1,12 @@
 
 "use client";
-import Banner from "@/app/components/templateSections/Banner";
-import Beneficios from "@/app/components/templateSections/Beneficios";
-import Header from "@/app/components/templateSections/Header";
-import Hero from "@/app/components/templateSections/Hero";
-import MovingSpan from "@/app/components/templateSections/MovingSpan";
-import Testimony from "@/app/components/templateSections/Testimony";
-import Faqs from "@/app/components/templateSections/Faqs";
+import Banner from "@/app/utils/generating-landing/components/templateSections/Banner";
+import Beneficios from "@/app/utils/generating-landing/components/templateSections/Beneficios";
+import Header from "@/app/utils/generating-landing/components/templateSections/Header";
+import Hero from "@/app/utils/generating-landing/components/templateSections/Hero";
+import MovingSpan from "@/app/utils/generating-landing/components/templateSections/MovingSpan";
+import Testimony from "@/app/utils/generating-landing/components/templateSections/Testimony";
+import Faqs from "@/app/utils/generating-landing/components/templateSections/Faqs";
 
 export default function Home() {
   const beneficiosData = [{"Titulo":"Resultados Medibles","Desc":"Te proporciono herramientas y métricas claras para que puedas ver tu progreso cada semana."},{"Titulo":"Acompañamiento Personalizado","Desc":"Cada plan es hecho a medida, adaptándose a tus necesidades y estilo de vida para asegurar tu éxito."},{"Titulo":"Comunidad de Apoyo","Desc":"Formarás parte de un grupo exclusivo donde compartirás experiencias y motivación con personas como tú."},{"Titulo":"Acceso a Recursos Exclusivos","Desc":"Recibirás contenido y materiales diseñados especialmente para ayudarte a avanzar más rápido hacia tus metas."}];

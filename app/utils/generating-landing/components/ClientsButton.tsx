@@ -14,11 +14,11 @@ const ClientsButton: React.FC<ClientsButtonProps> = ({customClasses}) => {
 			`}
 		>
 			<a 
-				href="/utils/create-landing-page" 
+				href="URL-DEL-CLIENTE" 
 				className={`
 					luta-btn-color text-white rounded-[4px] p-[14px] text-[18px] font-semibold block text-center
 				`} 
-			>Crear mi Landing en 2 minutos</a>
+			>CTA del cliente</a>
 			<span className='text-[14px] mt-[8px] text-center text-[#111]/80 block'>PD: La oferta termina hoy.</span>
 		</div>
 	)

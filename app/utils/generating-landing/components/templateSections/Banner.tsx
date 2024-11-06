@@ -1,4 +1,4 @@
-import ClientsButton from '@/app/components/templateSections/ClientsButton'
+import ClientsButton from '@/app/utils/generating-landing/components/ClientsButton'
 
 export default function Banner({text}: any) {
   return (

@@ -1,12 +1,12 @@
 
 "use client";
-import Banner from "@/app/components/templateSections/Banner";
-import Beneficios from "@/app/components/templateSections/Beneficios";
-import Header from "@/app/components/templateSections/Header";
-import Hero from "@/app/components/templateSections/Hero";
-import MovingSpan from "@/app/components/templateSections/MovingSpan";
-import Testimony from "@/app/components/templateSections/Testimony";
-import Faqs from "@/app/components/templateSections/Faqs";
+import Banner from "@/app/utils/generating-landing/components/templateSections/Banner";
+import Beneficios from "@/app/utils/generating-landing/components/templateSections/Beneficios";
+import Header from "@/app/utils/generating-landing/components/templateSections/Header";
+import Hero from "@/app/utils/generating-landing/components/templateSections/Hero";
+import MovingSpan from "@/app/utils/generating-landing/components/templateSections/MovingSpan";
+import Testimony from "@/app/utils/generating-landing/components/templateSections/Testimony";
+import Faqs from "@/app/utils/generating-landing/components/templateSections/Faqs";
 
 export default function Home() {
   const beneficiosData = [{"Titulo":"Resultados garantizados","Desc":"Con técnicas probadas y un enfoque individualizado, obtendrás resultados que te sorprenderán en tiempo récord."},{"Titulo":"Apoyo constante","Desc":"Estaré contigo en cada paso del camino, brindándote la motivación y el apoyo que necesitas para no rendirte."},{"Titulo":"Flexibilidad adaptada a ti","Desc":"Diseño soluciones que se adaptan a tu estilo de vida, asegurando que cada estrategia sea cómoda y efectiva para ti."},{"Titulo":"Comunidad inspiradora","Desc":"Al unirte a PRUEBA 2, te conviertes en parte de una comunidad que comparte tus objetivos y te impulsa a alcanzar tus sueños."}];

@@ -1,12 +1,12 @@
 
 "use client";
-import Banner from "@/app/components/templateSections/Banner";
-import Beneficios from "@/app/components/templateSections/Beneficios";
-import Header from "@/app/components/templateSections/Header";
-import Hero from "@/app/components/templateSections/Hero";
-import MovingSpan from "@/app/components/templateSections/MovingSpan";
-import Testimony from "@/app/components/templateSections/Testimony";
-import Faqs from "@/app/components/templateSections/Faqs";
+import Banner from "@/app/utils/generating-landing/components/templateSections/Banner";
+import Beneficios from "@/app/utils/generating-landing/components/templateSections/Beneficios";
+import Header from "@/app/utils/generating-landing/components/templateSections/Header";
+import Hero from "@/app/utils/generating-landing/components/templateSections/Hero";
+import MovingSpan from "@/app/utils/generating-landing/components/templateSections/MovingSpan";
+import Testimony from "@/app/utils/generating-landing/components/templateSections/Testimony";
+import Faqs from "@/app/utils/generating-landing/components/templateSections/Faqs";
 
 export default function Home() {
   const beneficiosData = [{"Titulo":"Crecimiento Personal Acelerado","Desc":"Obtén resultados visibles en menos tiempo con programas diseñados específicamente para tus necesidades."},{"Titulo":"Apoyo Continuo","Desc":"Acceso a una comunidad que te motiva y a recursos exclusivos para asegurar tu éxito a largo plazo."},{"Titulo":"Técnicas Comprobadas","Desc":"Utilizo métodos respaldados por investigación y experiencias anteriores que garantizan un cambio real."},{"Titulo":"Flexibilidad y Comodidad","Desc":"Entrenamientos adaptables a tu horario y estilo de vida, porque entiendo que cada persona es única."}];

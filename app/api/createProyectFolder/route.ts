@@ -18,10 +18,6 @@ export async function POST(req: NextRequest) {
     } else {
       return NextResponse.json({ message: 'La carpeta ya existe' }, { status: 400 });
     }
-    
-    // Crea la carpeta interna `images`
-    const imagesFolderPath = path.join(folderPath, 'images');
-    fs.mkdirSync(imagesFolderPath, { recursive: true });
 
     // Define la ruta para el archivo `page.tsx`
     const filePath = path.join(folderPath, 'page.tsx');
@@ -29,13 +25,13 @@ export async function POST(req: NextRequest) {
     // Contenido para el archivo `page.tsx`
     const fileContent = `
 "use client";
-import Banner from "@/app/components/templateSections/Banner";
-import Beneficios from "@/app/components/templateSections/Beneficios";
-import Header from "@/app/components/templateSections/Header";
-import Hero from "@/app/components/templateSections/Hero";
-import MovingSpan from "@/app/components/templateSections/MovingSpan";
-import Testimony from "@/app/components/templateSections/Testimony";
-import Faqs from "@/app/components/templateSections/Faqs";
+import Banner from "@/app/utils/generating-landing/components/templateSections/Banner";
+import Beneficios from "@/app/utils/generating-landing/components/templateSections/Beneficios";
+import Header from "@/app/utils/generating-landing/components/templateSections/Header";
+import Hero from "@/app/utils/generating-landing/components/templateSections/Hero";
+import MovingSpan from "@/app/utils/generating-landing/components/templateSections/MovingSpan";
+import Testimony from "@/app/utils/generating-landing/components/templateSections/Testimony";
+import Faqs from "@/app/utils/generating-landing/components/templateSections/Faqs";
 
 export default function Home() {
   const beneficiosData = ${JSON.stringify(copies.Beneficios.Lista)};
