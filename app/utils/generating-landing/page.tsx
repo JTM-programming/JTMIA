@@ -95,7 +95,7 @@ export default function GeneratingLanding() {
 
 				const data = await response.json();
 				console.log('Carpeta creada exitosamente:', data.message);
-				window.location.href = `/pages/${formattedName}`;
+				window.location.href = `/utils/images-form/`;
 
 			} catch (error) {
 				console.error('Error:', error);

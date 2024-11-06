@@ -73,7 +73,8 @@ export default function GeneratingLanding() {
 
 		await uploadImage(image1, 'image1.jpg');
 		await uploadImage(image2, 'image2.jpg');
-		alert('Images uploaded successfully!');
+		
+		window.location.href = `/pages/${folderToInsertImages}`;
 	};
 
 	const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>, setImage: React.Dispatch<React.SetStateAction<File | null>>, setPreview: React.Dispatch<React.SetStateAction<string | null>>) => {
