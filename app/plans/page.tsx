@@ -4,7 +4,9 @@ export default function PlansPage() {
 
 	const PLANS = [
 		{
+			id: "P-3VT75497KL146340GM4TI5XY",
 			name: "Starter Plan",
+			slug: "starter",
 			price: 77,
 			yearlyBilled: true,
 			description: "Landing Page - Starter Plan",

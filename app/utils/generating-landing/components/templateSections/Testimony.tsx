@@ -44,7 +44,7 @@ const Testimony = ({ titulo, testimonios }: TestimonyProps) => {
                     <div className="flex gap-2">
                       <img
                         className="border-[2px] highlightBorder size-[55px] rounded-full"
-                        src=""
+                        src={testimonio.Nombre}
                         alt={`${testimonio.Nombre} - Tomas Costa LP`}
                       />
                       <div>

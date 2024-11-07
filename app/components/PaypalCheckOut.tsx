@@ -1,5 +1,6 @@
 'use client'
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect } from "react";
+import { createClient, User } from '@supabase/supabase-js';
 
 declare global {
 	interface Window {
@@ -7,11 +8,60 @@ declare global {
 	}
 }
 
+type UserData = {
+	id: string;
+	nombre_negocio: string;
+	descripcion_negocio: string;
+	objetivo_landing: string;
+	audiencia_objetivo: string;
+	beneficios: string;
+	historia: string;
+	email: string;
+	color_palete: string;
+	plan: string;
+};
+
 export default function PaypalCheckOut({plan}: any) {
+
+	const [userData, setUserData] = useState<UserData | null>(null);
+	const [user, setUser] = useState<User | null>(null);
 	const [paidFor, setPaidFor] = useState(false)
 	const [loadState, setLoadState] = useState({ loading: false, loaded: false });
 
+	// Configura el cliente de Supabase
+	const supabaseUrl = process.env.NEXT_PUBLIC_PROJECT_URL || "";
+	const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY || "";
+	const supabase = createClient(supabaseUrl, supabaseKey);
+
 	const paypalRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const fetchUserData = async () => {
+			const { data: { user }, error: sessionError } = await supabase.auth.getUser();
+
+			if (sessionError) {
+				console.error('Error fetching user session:', sessionError);
+				return;
+			}
+
+			if (user) {
+				setUser(user); // Guardar el usuario logueado en el estado
+
+				const { data, error } = await supabase
+					.from('users_data')
+					.select()
+					.eq('id', user.id);
+
+				if (error) {
+					console.error('Error fetching user data:', error);
+				} else {
+					setUserData(data[0]);
+				}
+			}
+		};
+
+		fetchUserData();
+	}, []);
 
 	useEffect(() => {
 		if (!loadState.loading && !loadState.loaded) {
@@ -34,15 +84,18 @@ export default function PaypalCheckOut({plan}: any) {
 					},
 					createSubscription: function(data: any, actions: any) {
 					  return actions.subscription.create({
-						plan_id: 'P-3VT75497KL146340GM4TI5XY'
+						plan_id: plan.id
 					  });
 					},
-					onApprove: function(data: any, actions: any) {
+					onApprove: async function(data: any, actions: any) {
 						setPaidFor(true);
 						console.log("El usuario completo el pago: ", data)
 
 						// TODO: Cargar el plan pagado en supabase
-						// codigo...
+						const { data: planData, error: planDataError } = await supabase
+							.from('users_data')
+							.update({ plan: plan.slug })
+							.eq('id', user?.id);
 
 						window.location.href = '/generating-landing';
 					}

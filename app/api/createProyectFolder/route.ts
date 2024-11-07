@@ -22,6 +22,9 @@ export async function POST(req: NextRequest) {
     // Define la ruta para el archivo `page.tsx`
     const filePath = path.join(folderPath, 'page.tsx');
 
+    const businessName = folderName
+					.replace(/-/g, ' ') || ' ';
+
     // Contenido para el archivo `page.tsx`
     const fileContent = `
 "use client";
@@ -47,8 +50,8 @@ export default function Home() {
       <Testimony titulo="${copies.Testimonios.Titulo}" testimonios={testimoniosData} />
       <Banner text="${copies.SeccionCTA}" />
       <Faqs titulo="${copies.Preguntas.Titulo}" preguntas={preguntasData} />
-      <p className="py-8 text-center text-[#000]/80">
-        ©${folderName} 2024. Todos los derechos reservados
+      <p className="py-8 text-center text-[#000]/80 capitalize">
+        ©${businessName} ${new Date().getFullYear()}. Todos los derechos reservados
       </p>
       <style>{\`
         .luta-text-color {
@@ -65,6 +68,10 @@ export default function Home() {
         }
         .luta-foreground-color {
           background-color: ${colors[1]};
+        }
+        .arrow-left svg path,
+        .arrow-right svg path {
+          stroke: ${colors[0]};
         }
       \`}</style>
     </>

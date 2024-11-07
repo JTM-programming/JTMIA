@@ -41,6 +41,10 @@ export default function Home() {
         .luta-foreground-color {
           background-color: #ffffff;
         }
+        .arrow-left svg path,
+        .arrow-right svg path {
+          stroke: #e66465;
+        }
       `}</style>
     </>
   );

@@ -106,6 +106,7 @@ export default function GeneratingLanding() {
 			generateLandingTexts();
 			setTextsFetched(true);
 		}
+		
 	}, [userData, textsFetched]); // Asegúrate de que textsFetched esté en las dependencias
 
 	return (
