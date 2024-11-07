@@ -62,36 +62,48 @@ export default function PlansPage() {
 					{
 						PLANS.map((plan) => {
 							return (
-								<div className='bg-white p-8 rounded-[8px]'>
-									<h3 className='font-bold text-[22px]'>{plan.name}</h3>
-									<ul className='divide-y my-4 list-inside'>
+								<div className={plan.slug === 'starter' ? '': 'md:pt-[40px]'}>
+									<div className='bg-white overflow-clip border border-[#2C6FFF]/20 rounded-[8px] h-full'>
 										{
-											plan.includes.map((item) => {
-												return (
-													<li className='text-[14px] py-4 flex gap-4'>
-														<svg className='min-w-[16px] w-[16px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill='#2C6FFF' d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
-														{item}
-													</li>
-												)
-											})
+											plan.slug === 'starter' ?
+												<div className='bg-[#2C6FFF] p-2 text-white text-center font-semibold'>
+													Más vendido
+												</div>
+											:
+												''
 										}
-									</ul>
-									<div className='mb-4'>
-										<p className="block mb-4 line-through text-[#111]/60"><span className="">U$D</span> {plan.oldPrice}</p>
-										<p><span>U$D </span> <span className='text-[34px] font-extrabold'>{plan.price}</span> {plan.yearlyBilled ? ' / año' : ' pago unico'}</p>
-									</div>
-									{
-										plan.slug === 'starter' ?
-											<PaypalCheckOut plan={plan} /> 
-										:
-											<a 
-												className='bg-[#2C6FFF] text-white w-full block text-center rounded-[4px] p-3' 
-												href="https://wa.me/+542616841853"
-												target='white'
-											>
-											Solicitar proyecto</a>
+										<div className='p-8'>
+											<h3 className='font-bold text-[22px]'>{plan.name}</h3>
+											<ul className='divide-y my-4 list-inside'>
+												{
+													plan.includes.map((item) => {
+														return (
+															<li className='text-[14px] py-4 flex gap-4'>
+																<svg className='min-w-[16px] w-[16px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill='#2C6FFF' d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+																{item}
+															</li>
+														)
+													})
+												}
+											</ul>
+											<div className='mb-4'>
+												<p className="block mb-4 line-through text-[#111]/60"><span className="">U$D</span> {plan.oldPrice}</p>
+												<p><span>U$D </span> <span className='text-[34px] font-extrabold'>{plan.price}</span> {plan.yearlyBilled ? ' / año' : ' pago unico'}</p>
+											</div>
+											{
+												plan.slug === 'starter' ?
+													<PaypalCheckOut plan={plan} /> 
+												:
+													<a 
+														className='bg-[#2C6FFF] text-white w-full block text-center rounded-[4px] p-3' 
+														href="https://wa.me/+542616841853"
+														target='white'
+													>
+													Solicitar proyecto</a>
 
-									}
+											}
+										</div>
+									</div>
 								</div>
 							)
 						})
