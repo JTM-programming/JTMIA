@@ -19,6 +19,7 @@ type UserData = {
 	historia: string;
 	email: string;
 	color_palete: string;
+	current_plan: string;
 };
 
 export default function GeneratingLanding() {
@@ -27,6 +28,7 @@ export default function GeneratingLanding() {
 	const [textsFetched, setTextsFetched] = useState(false);
 
 	useEffect(() => {
+		// Obtener datos del usuario y luego buscar los datos específicos del usuario en Supabase
 		const fetchUserData = async () => {
 			const { data: { user }, error: sessionError } = await supabase.auth.getUser();
 
@@ -36,7 +38,7 @@ export default function GeneratingLanding() {
 			}
 
 			if (user) {
-				setUser(user); // Guardar el usuario logueado en el estado
+				setUser(user);
 
 				const { data, error } = await supabase
 					.from('users_data')
@@ -47,6 +49,7 @@ export default function GeneratingLanding() {
 					console.error('Error fetching user data:', error);
 				} else {
 					setUserData(data[0]);
+					console.log("DATA:", data[0]);
 				}
 			}
 		};
@@ -55,24 +58,30 @@ export default function GeneratingLanding() {
 	}, []);
 
 	useEffect(() => {
+		// Verificar que userData esté completamente cargado y textsFetched esté en falso antes de generar textos
 		const generateLandingTexts = async () => {
 			if (!userData) return;
+			console.log("ENTRA")
+			try {
+				const response = await axios.post("/api/openai", {
+					businessName: userData.nombre_negocio,
+					businessDescription: userData.descripcion_negocio,
+					landingGoal: userData.objetivo_landing,
+					targetAudience: userData.audiencia_objetivo,
+					beneficts: userData.beneficios,
+					story: userData.historia,
+					email: userData.email,
+					current_plan: userData.current_plan
+				});
 
-			const response = await axios.post("/api/openai", {
-				businessName: userData.nombre_negocio,
-				businessDescription: userData.descripcion_negocio,
-				landingGoal: userData.objetivo_landing,
-				targetAudience: userData.audiencia_objetivo,
-				beneficts: userData.beneficios,
-				story: userData.historia,
-				email: userData.email,
-			});
+				const cleanContent = response.data.content.replace(/```json|```/g, "");
+				const texts = JSON.parse(cleanContent);
 
-			// Limpiamos el JSON por las dudas
-			const cleanContent = response.data.content.replace(/```json|```/g, "");
-			const texts = JSON.parse(cleanContent);
-
-			createLandingFolder(texts, userData);
+				await createLandingFolder(texts, userData);
+				setTextsFetched(true); // Evitar repetir la llamada
+			} catch (error) {
+				console.error("Error generando textos de landing:", error);
+			}
 		};
 
 		const createLandingFolder = async (texts: any, userData: UserData) => {
@@ -98,16 +107,15 @@ export default function GeneratingLanding() {
 				window.location.href = `/utils/images-form/`;
 
 			} catch (error) {
-				console.error('Error:', error);
+				console.error('Error creando la carpeta de proyecto:', error);
 			}
 		};
 
-		if (!textsFetched && userData) { // Solo ejecutar si hay userData
+		if (!textsFetched && userData) {
 			generateLandingTexts();
-			setTextsFetched(true);
 		}
-		
-	}, [userData, textsFetched]); // Asegúrate de que textsFetched esté en las dependencias
+
+	}, [userData, textsFetched]);
 
 	return (
 		<div>

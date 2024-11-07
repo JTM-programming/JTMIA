@@ -18,14 +18,13 @@ type UserData = {
 	historia: string;
 	email: string;
 	color_palete: string;
-	plan: string;
+	current_plan: string;
 };
 
 export default function PaypalCheckOut({plan}: any) {
 
 	const [userData, setUserData] = useState<UserData | null>(null);
 	const [user, setUser] = useState<User | null>(null);
-	const [paidFor, setPaidFor] = useState(false)
 	const [loadState, setLoadState] = useState({ loading: false, loaded: false });
 
 	// Configura el cliente de Supabase
@@ -88,19 +87,24 @@ export default function PaypalCheckOut({plan}: any) {
 					  });
 					},
 					onApprove: async function(data: any, actions: any) {
-						setPaidFor(true);
 						console.log("El usuario completo el pago: ", data)
 
-						// TODO: Cargar el plan pagado en supabase
-						const { data: planData, error: planDataError } = await supabase
-							.from('users_data')
-							.update({ plan: plan.slug })
-							.eq('id', user?.id);
+						const confirmPayment = async () => {
+							const { data: planData, error: planDataError } = await supabase
+								.from('users_data')
+								.update({ current_plan: plan.slug })
+								.eq('id', user?.id);
+							
+							console.log("Datos del plan: ", planData);
+							console.log("Errores del plan: ", planDataError);
 
-						window.location.href = '/generating-landing';
+							window.location.href = '/utils/generating-landing';
+						}
+						confirmPayment();
 					}
 				})
 				.render(paypalRef.current);
+
 		}
 	}, [loadState]);
 

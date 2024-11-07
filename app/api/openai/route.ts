@@ -17,6 +17,7 @@ export async function POST(request: NextRequest){
         beneficts,
         email,
         story,
+        current_plan
      } = await request.json();
 
 
