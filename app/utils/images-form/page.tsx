@@ -14,7 +14,7 @@ type UserData = {
 
 export default function GeneratingLanding() {
 	const [userData, setUserData] = useState<UserData | null>(null);
-	const [user, setUser] = useState<User | null>(null);
+	// const [user, setUser] = useState<User | null>(null);
 	const [image1, setImage1] = useState<File | null>(null);
 	const [image2, setImage2] = useState<File | null>(null);
 	const [previewImage1, setPreviewImage1] = useState<string | null>(null);
@@ -30,7 +30,7 @@ export default function GeneratingLanding() {
 			}
 
 			if (user) {
-				setUser(user);
+				// setUser(user);
 
 				const { data, error } = await supabase
 					.from('users_data')
@@ -92,7 +92,7 @@ export default function GeneratingLanding() {
 					<div className='mb-8'>
 						<label className='font-semibold' htmlFor="image1">Imagen Encabezado:</label>
 						<p className='text-[14px] text-[#111]/80 my-2'>
-							Recomendamos que uses una imagen de muy alta calidad en la que se vea a tu "cliente ideal" feliz por haber trabajado con vos y con los resultados prometidos.
+							Recomendamos que uses una imagen de muy alta calidad en la que se vea a tu &quot;cliente ideal&quot; feliz por haber trabajado con vos y con los resultados prometidos.
 						</p>
 						<div className='bg-gray-200 size-[160px] relative flex items-center justify-center'>
 							<input

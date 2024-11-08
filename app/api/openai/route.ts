@@ -1,4 +1,3 @@
-import next from "next";
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
@@ -15,9 +14,7 @@ export async function POST(request: NextRequest){
         landingGoal,
         targetAudience,
         beneficts,
-        email,
         story,
-        current_plan
      } = await request.json();
 
 

@@ -1,14 +1,25 @@
 import PaypalCheckOut from '../components/PaypalCheckOut';
 
+type Plan = {
+	id: string,
+	name: string,
+	slug: string,
+	oldPrice: string,
+	price: string,
+	yearlyBilled: boolean,
+	description: string,
+	includes: string[],
+}
+
 export default function PlansPage() {
 
-	const PLANS = [
+	const PLANS: Plan[] = [
 		{
 			id: "P-3VT75497KL146340GM4TI5XY",
 			name: "Starter Plan",
 			slug: "starter",
-			oldPrice: 280,
-			price: 77,
+			oldPrice: "280",
+			price: "77",
 			yearlyBilled: true,
 			description: "Landing Page - Starter Plan",
 			includes: [
@@ -20,35 +31,23 @@ export default function PlansPage() {
 				"Optimización avanzada para la conversión",
 			],
 		},
-		// {
-		//   name: "Stelar Plan",
-		//   price: 120,
-		//   yearlyBilled: true,
-		//   description: "Landing Page - Stelar Plan",
-		//   includes: [
-		// 	"Listo para usar en 2 minutos",
-		// 	"Textos personalizados y optimizados para SEO potenciado con IA",
-		// 	"Diseño pensado para profesionales de la salud",
-		// 	"Contacto 24/7",
-		// 	"Integración con herramientas de marketing",
-		// 	"Optimización avanzada para la conversión",
-		//   ],
-		// },
 		{
-		  name: "Custom Plan",
-		  oldPrice: "1.300",
-		  price: 600,
-		  yearlyBilled: false,
-		  description: "Landing Page - Custom Plan",
-		  includes: [
-			"Textos personalizados y optimizados para SEO potenciado con IA",
-			"Diseño único y personalizado adaptado a vos",
-			"Soporte técnico de 6 meses",
-			"Integración avanzada con herramientas de marketing",
-			"Optimización avanzada para la conversión",
-			"Creación de imagenes a medida",
-			"Dominio .com",
-		  ],
+			id: "",
+			name: "Custom Plan",
+			slug: "",
+			oldPrice: "1.300",
+			price: "600",
+			yearlyBilled: false,
+			description: "Landing Page - Custom Plan",
+			includes: [
+				"Textos personalizados y optimizados para SEO potenciado con IA",
+				"Diseño único y personalizado adaptado a vos",
+				"Soporte técnico de 6 meses",
+				"Integración avanzada con herramientas de marketing",
+				"Optimización avanzada para la conversión",
+				"Creación de imagenes a medida",
+				"Dominio .com",
+			],
 		},
 	]
 
@@ -60,7 +59,7 @@ export default function PlansPage() {
 				</h1>
 				<div className="grid md:grid-cols-2 gap-4">
 					{
-						PLANS.map((plan) => {
+						PLANS.map((plan: Plan) => {
 							return (
 								<div className={plan.slug === 'starter' ? '': 'md:pt-[40px]'}>
 									<div className='bg-white overflow-clip border border-[#2C6FFF]/20 rounded-[8px] h-full'>

@@ -1,4 +1,8 @@
-export default function MovingSpan({span}: any) {
+interface MovingSpanProps {
+	span: string
+}
+
+export default function MovingSpan({span}: MovingSpanProps) {
 
 	const businessName = span
 		.replace(/-/g, ' ') || ' ';

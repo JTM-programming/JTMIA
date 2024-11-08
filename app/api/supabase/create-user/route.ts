@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 		})
 		.select()
 
-	console.log(newUserError, newUserDataError)
+	console.log(newUserData, newUserError, newUserDataError)
 
   	// Redirigir al usuario a la página de planes
   	const response = NextResponse.json({ message: "User created and logged in successfully" });

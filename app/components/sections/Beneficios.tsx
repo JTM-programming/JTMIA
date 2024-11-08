@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Beneficios() {
 	const BENEFICIOS = [
 		{
@@ -36,8 +38,8 @@ export default function Beneficios() {
 						{
 							BENEFICIOS.map((beneficio) => { 
 								return(
-									<div className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
-										<img className="size-[24px]" src={`/images/${beneficio.icon}`} alt={beneficio.titulo} />
+									<div key={beneficio.titulo} className="rounded-[8px] w-full md:w-[372px] foreground p-[32px]">
+										<Image className="size-[24px]" src={`/images/${beneficio.icon}`} alt={beneficio.titulo} />
 										<h3 className="text-[22px] font-bold my-[16px]">{beneficio.titulo}</h3>
 										<p className="font-normal text-[16px]">{beneficio.descripcion}</p>
 									</div>

@@ -1,7 +1,13 @@
 import React from "react";
 import ClientsButton from '@/app/utils/generating-landing/components/ClientsButton'
 
-const Hero = ({titulo, descripcion, proyecto}: any) => {
+interface HeroProps {
+  titulo: string, 
+  descripcion: string, 
+  proyecto: string
+}
+
+const Hero = ({titulo, descripcion, proyecto}: HeroProps) => {
 
   const businessName = proyecto
 					.replace(/-/g, ' ') || ' ';

@@ -1,6 +1,10 @@
 import ClientsButton from '@/app/utils/generating-landing/components/ClientsButton'
 
-export default function Banner({text}: any) {
+interface BannerProps {
+  text: string;
+}
+
+export default function Banner({text}: BannerProps) {
   return (
     <section className="py-[80px] px-4">
       <div className="jtm-container text-center bg-white py-[30px] md:py-[80px] rounded-[8px]">

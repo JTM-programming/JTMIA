@@ -4,6 +4,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import Image from "next/image";
 
 type Testimonio = {
 	Texto: string;
@@ -40,16 +41,16 @@ const Testimony = ({ titulo, testimonios }: TestimonyProps) => {
               <SwiperSlide key={index}>
                 <div className="py-[60px] h-[380px] px-[40px] rounded-[8px] bg-[#FFF] highlightBorder">
                   <div className="flex flex-col justify-between h-full">
-                    <p className="text-4 text-[#111]">"{testimonio.Texto}"</p>
+                    <p className="text-4 text-[#111]">&quot;{testimonio.Texto}&quot;</p>
                     <div className="flex gap-2">
-                      <img
+                      <Image
                         className="border-[2px] highlightBorder size-[55px] rounded-full"
                         src={testimonio.Nombre}
                         alt={`${testimonio.Nombre} - Tomas Costa LP`}
                       />
                       <div>
                         <h5 className="text-[14px] mb-2 font-semibold">{testimonio.Nombre}</h5>
-                        <img className="h-4" src="/images/luta-stars.webp" alt="5 estrellas" />
+                        <Image className="h-4" src="/images/luta-stars.webp" alt="5 estrellas" />
                       </div>
                     </div>
                   </div>

@@ -24,7 +24,7 @@ type UserData = {
 
 export default function GeneratingLanding() {
 	const [userData, setUserData] = useState<UserData | null>(null);
-	const [user, setUser] = useState<User | null>(null);
+	// const [user, setUser] = useState<User | null>(null);
 	const [textsFetched, setTextsFetched] = useState(false);
 	const [payed, setPayed] = useState(false);
 
@@ -39,7 +39,7 @@ export default function GeneratingLanding() {
 			}
 
 			if (user) {
-				setUser(user);
+				// setUser(user);
 
 				const { data, error } = await supabase
 					.from('users_data')
