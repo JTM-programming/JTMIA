@@ -15,11 +15,11 @@ export default function Faqs() {
 			respuesta: `
 Veo constantemente en mi Instagram publicidades de "profesionales" o "agencias" que promocionan sus páginas, y cuando las veo, no puedo creer que haya gente que les compre. 
 
-Da bronca porque la gente compra desde el desconocimiento. Es igual que si yo fuera a comprar un auto, y el vendedor es bueno, podría venderme cualquier porquería porque no sé nada de autos, pero el auto por lo menos lo puedo ver, sentir el motor, probarlo, etc...
+Y me molesta porque la gente compra desde el desconocimiento. Es igual que si yo fuera a comprar un auto, y el vendedor es bueno, podría venderme cualquier porquería porque no sé nada de autos, pero el auto por lo menos lo puedo ver, sentir el motor, probarlo, etc...
 
 El problema es que la mayoría de las personas todavía no están listas para invertir 600 o 1.000 USD en una página web. 
 
-Por eso se me ocurrió crear LUTA para que quien necesite una página pueda tener una muy bien hecha, por un precio muy accesible. Y si, también es una "plantilla", si no, te estaria regalando mi trabajo.
+Por eso se me ocurrió crear LUTA para que quien necesite una página pueda tener una muy bien hecha y por un precio muy accesible. Y si, también es una "plantilla", si no, te estaria regalando mi trabajo.
 
 La diferencia es que está planeada y diseñada para un rubro específico, desarrollada como se debe, con textos generados por una IA entrenada y con actualizaciones constantes.`
 		  },
