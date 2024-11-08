@@ -28,7 +28,7 @@ export async function POST(request: NextRequest){
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [
-                { role: "system", content: "Sos un experto en Copywriting, Landing Pages, y conversión con mas de 20 años de experiencia." },
+                { role: "system", content: "Sos un experto en Copywriting, Landing Pages, y Ventas con mas de 20 años de experiencia. Has estudiado, trabajado y aprendido de los mejores del rubro." },
                 {
                     role: "user",
                     content: `
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest){
                         "Beneficios": {
                             "Titulo": "Titulo para presentar los beneficios",
                             "Lista": [
-                        (4 Beneficios)
+                        (4 Beneficios: ${beneficts})
                             {
                                 "Titulo": "Título corto que describa un beneficio específico",
                                 "Desc": "Descripción detallada del beneficio"
@@ -63,14 +63,9 @@ export async function POST(request: NextRequest){
                             "Lista": [
                         (5 Testimonios)
                             {
-                                "Texto": "Comentario positivo sobre el negocio que aproveche para manejar posibles objeciones.",
+                                "Texto": "Comentario positivo sobre el negocio, que aproveche para manejar posibles objeciones de los usuarios.",
                                 "Nombre": "Nombre del cliente"
                             },
-                            {
-                                "Texto": "Otro comentario positivo.",
-                                "Desc": "Más detalles sobre lo que les gustó.",
-                                "Nombre": "Otro cliente"
-                            }
                             ]
                         },
                         "Copy": {
@@ -83,7 +78,7 @@ export async function POST(request: NextRequest){
                             "Lista": [
                         (4 Preguntas)
                             {
-                                "Pregunta": "Posible objecion del usuario manejada en forma de pregunta.",
+                                "Pregunta": "Posible objecion del usuario, manejada en forma de pregunta.",
                                 "Respuesta": "Respuesta a la pregunta."
                             },
                             ]
@@ -94,7 +89,7 @@ export async function POST(request: NextRequest){
             ],
         });
     
-        // console.log(completion.choices[0].message);
+        console.log(completion.choices[0].message);
         return NextResponse.json(completion.choices[0].message);
 
     } catch {

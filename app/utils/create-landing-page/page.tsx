@@ -56,7 +56,7 @@ export default function CreateLanding() {
 	return (
 		<section className="py-[60px] md:py-[80px] px-4">
 			<div className="max-w-[484px] mx-auto">
-				<span className="block text-center text-[18px] font-bold text-[#2C6FFF]">CREA TU LANDING EN 2 MINUTOS</span>
+				<span className="block text-center text-[18px] font-bold text-[#2C6FFF]">CREA TU LANDING EN 2 MINUTOS...</span>
 				<h1 className="text-center text-[28px] font-bold leading-[120%] mt-4 mb-8">Llena este formulario para crear tu Landing Page</h1>
 				<form action="/" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
 					<label className="block mb-4" htmlFor="businessName">
@@ -64,6 +64,7 @@ export default function CreateLanding() {
 						<input
 							onChange={(e) => { setBusinessName(e.target.value) }}
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
+							placeholder='Nombre del negocio'
 							type="text"
 						/>
 					</label>
@@ -71,6 +72,7 @@ export default function CreateLanding() {
 						Descripcion de tu negocio
 						<textarea
 							onChange={(e) => { setBusinessDescription(e.target.value) }}
+							placeholder='Describi de forma clara y con detalle a que te dedicas'
 							className="resize-none block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 						/>
 					</label>
@@ -78,6 +80,7 @@ export default function CreateLanding() {
 						Objetivo de la Landing
 						<input
 							onChange={(e) => { setLandingGoal(e.target.value) }}
+							placeholder='Ej. Que agenden una reunion conmigo'
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="text"
 						/>
@@ -86,6 +89,7 @@ export default function CreateLanding() {
 						Cual es tu publico objetivo
 						<input
 							onChange={(e) => { setTargetAudience(e.target.value) }}
+							placeholder='Edades, Paises, Profesiones, etc...'
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="text"
 						/>
@@ -94,6 +98,7 @@ export default function CreateLanding() {
 						Cuales son los 4 beneficios principales de trabajar con vos
 						<input
 							onChange={(e) => { setBeneficts(e.target.value) }}
+							placeholder='Los 4 beneficios que te diferencian del resto'
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="text"
 						/>
@@ -102,6 +107,7 @@ export default function CreateLanding() {
 						Historia de como llegaste a donde estas y porque ayudas a tus clientes
 						<textarea
 							onChange={(e) => { setStory(e.target.value) }}
+							placeholder='Historia resumida de como llegaste a donde estas para que el usuario conecte con vos'
 							className="resize-none block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 						/>
 					</label>
@@ -134,7 +140,7 @@ export default function CreateLanding() {
 							/>
 						</div>
 						<p className="text-[14px] text-[#111]/70">
-							Este color se va a usar de fondo, lo ideal es que sea lo más contrastante posible al color principal, por ejemplo, si el principal es rojo, el color de fondo ideal sería un tono de rojo muy claro o muy oscuro.
+							Este color se va a usar de fondo, lo ideal es que sea lo más contrastante posible al color principal, por ejemplo, si el principal es rojo, el color de fondo ideal sería un tono de rojo muy claro (practicamente blanco) o muy oscuro (practicamente negro).
 						</p>
 					</label>
 					<label className='block mt-4'>
@@ -173,6 +179,7 @@ export default function CreateLanding() {
 						Tu correo electronico
 						<input
 							onChange={(e) => { setEmail(e.target.value) }}
+							placeholder='Tu correo electronico'
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="text"
 						/>
@@ -181,6 +188,7 @@ export default function CreateLanding() {
 						Contraseña
 						<input
 							onChange={(e) => { setPassword(e.target.value) }}
+							placeholder='Tu correo constraseña'
 							className="block mt-2 outline outline-none w-full p-2 rounded-[4px] text-[16px] placeholder:text-[14px] border border-[#2C6FFF]/30"
 							type="password"
 						/>

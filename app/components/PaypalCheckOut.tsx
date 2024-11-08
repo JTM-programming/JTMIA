@@ -89,6 +89,7 @@ export default function PaypalCheckOut({plan}: any) {
 					onApprove: async function(data: any, actions: any) {
 						console.log("El usuario completo el pago: ", data)
 
+						// Si se confirma el pago actulizamos el plan del usario en la DB
 						const confirmPayment = async () => {
 							const { data: planData, error: planDataError } = await supabase
 								.from('users_data')
